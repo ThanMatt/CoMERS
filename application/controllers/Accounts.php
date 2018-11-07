@@ -9,6 +9,19 @@ class Accounts extends CI_Controller {
     $password = $this->input->post('password');
 
     if ($this->accounts_model->validate($account_id, $password)) {
+
+      $records = $this->accounts_model->getMyRecords($account_id);
+
+      //:: Initializes account data for creating a session
+      $account_data = array(
+        'account_id' => $account_id,
+        'organization' => $records['Organization'],
+        'logged_in' => true,
+      );
+      
+      //:: Creates session using the account data
+      $this->session->set_userdata($account_data);
+
       $response['success'] = true;
       echo json_encode($response);
     } else {
