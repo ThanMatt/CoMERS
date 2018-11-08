@@ -34,7 +34,7 @@ body{
 
 .nav-container nav a{
     color: black;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
     margin-right: 30px;
 }
@@ -100,26 +100,26 @@ body{
 .right{
     height: 100%;
     border-left: 3px solid black;
-    transform: translateX(-200px);
+    transform: translateX(-7%);
     padding: 100px auto;
     box-sizing: border-box;
 }
 
 .right h1{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .right h3{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .right label{
-    font-size: 1.3rem;
-    margin-bottom: 70px;
+    font-size: 1rem;
+    margin-bottom: 30px;
 }
 
 .right ul li{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .hupla{
@@ -127,7 +127,7 @@ body{
 }
 
 .hupla h1{
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 0px 50px;
     box-sizing: border-box;
 }
