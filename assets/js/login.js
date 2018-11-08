@@ -11,7 +11,7 @@ $(function () {
       dataType: 'json',
       success: function (response) {
         if (response.success) {
-          alert('Pasok ka!');
+          window.location.replace("home");
         } else {
           $("#login_btn").effect("shake");
         }

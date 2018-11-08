@@ -43,10 +43,11 @@
       <div class='login-container'>
         <?php if (!$this->session->userdata('logged_in')): ?>
           <label class='col-lg-12 btn btn-lg'><a href="login">LOGIN</a></label>
+        <?php else: ?>
+          <label class='col-lg-12 btn btn-lg'><a href="accounts/logout">LOGOUT</a></label>
         <?php endif ?>
       </div>
     </div> <!-- End of Title-Container -->
-
     <div class="col-lg-12 col-sm-12 content">
       <div class="col-sm-6 left">
         <img src="<?=base_url()?>assets/img/compi.png">

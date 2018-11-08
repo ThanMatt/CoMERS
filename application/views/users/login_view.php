@@ -3,6 +3,8 @@
 
 <head>
   <!-- Required meta tags -->
+
+  <?php if(!$this->session->userdata('logged_in')): ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -78,6 +80,11 @@
   <script src="<?=base_url()?>assets/js/login.js"></script>
   <script src="<?=base_url()?>assets/js/script.js">
   </script>
+
+<?php else: ?>
+<?php redirect('home')?>
+<?php endif ?>
+
 </body>
 
 </html>
