@@ -76,9 +76,9 @@
     </div>
 
     <div class='container-fluid templates-container'>
-      <div class="box1"></div>
-      <div class="box1"></div>
-      <div class="box1"></div>
+      <div class="box1" id="temp1"></div>
+      <div class="box1" id="temp2"></div>
+      <div class="box1" id="temp3"></div>
       <div class="box1"></div>
       <div class="box1"></div>
       <div class="box1"></div>
