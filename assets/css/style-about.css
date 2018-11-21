@@ -6,11 +6,11 @@ body{
 
 .main-container{
     width: 100%;
-    height: 2000px;
+    height: 1080px;
     padding: 0;
     margin: 0;
     border-left: 10px solid #E32F2F;
-    background-image: url("../img/landing-bg.jpg");
+    background-image: url("../img/about-bg.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -92,103 +92,42 @@ body{
     transform: translateY(100px);
 }
 
-.left{
-    height: 100%;
-    z-index: 1;
-}
-
-.right{
-    height: 100%;
-    border-left: 3px solid black;
-    transform: translateX(-7%);
-    padding: 100px auto;
+.content-border{
+    border-left: 8px solid black;
+    padding: 0px 40px;
     box-sizing: border-box;
+    margin-left: 100px;
 }
 
-.right h1{
-    font-size: 5rem;
-}
-
-.right h3{
-    font-size: 2rem;
-}
-
-.right label{
-    font-size: 1rem;
-    margin-bottom: 30px;
-}
-
-.right ul li{
-    font-size: 1rem;
-}
-
-.hupla{
-    transform: translateY(200px);
-}
-
-.hupla h1{
-    font-size: 3rem;
-    padding: 0px 50px;
-    box-sizing: border-box;
-}
-
-.templates-container{
-    transform: translateY(250px);
-    height: 900px;
+.about-title{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.box1{
-    width: 30%;
-    height: 400px;
-    background-color: black;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
+.about-title label:nth-child(1){
+    font-size: 5rem;
+    font-weight: bold; 
 }
 
-.box1:hover{
-    box-shadow: 0px 0px 10px black;
+.about-title label:nth-child(2){
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-#temp1{
-    background-image: url("../img/temp1_black.jpg");
-    background-size: cover;
-    background-position: center;
+.about-title label:nth-child(3){
+    letter-spacing: 0px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
 }
 
-#temp1:hover{
-    background-image: url("../img/temp1.jpg");
-    background-size: cover;
-    background-position: center;
+.about-title label:nth-child(4){
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: -100px;
 }
 
-#temp2{
-    background-image: url("../img/temp2_black.jpg");
-    background-size: cover;
-    background-position: center;
+.about-title label:nth-child(5){
+    font-size: 1.2rem;
 }
-
-#temp2:hover{
-    background-image: url("../img/temp2.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-#temp3{
-    background-image: url("../img/temp3_black.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-#temp3:hover{
-    background-image: url("../img/temp3.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-
 
 
