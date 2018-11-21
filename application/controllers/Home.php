@@ -10,7 +10,7 @@ class Home extends CI_Controller  {
   }
 
   public function about() {
-    $this->load->view('edit');
+    $this->load->view('about');
   }
 }
 
