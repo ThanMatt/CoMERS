@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #7B9F35;
+    background-image: url("../../img/chipotle/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    height: 60vh;
+    background-color: #A5C663;
+    background-image: url("../../img/chipotle/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-left: 10px solid #714C8F;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+}
+
+.form-container{
+    height: 80vh;
+    background-color: white;
+    transform: translateX(10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 10px solid #714C8F;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+}
+
+.picture-container{
+    height: 500px;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateX(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255,0.5);
+}
+
+
+.form-container .title{
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background-color: #9476AB;
+}
+
+.submit{
+    color: white;
+    background-color: #9476AB;
+    transition: all .5 ease-in-out;
+    margin-bottom: 10px;
+}
+
+.submit:hover{
+    background-color: #714C8F;
+}
+
+.clear{
+    background-color: #CA6573;
+    transition: all .5 ease-in-out;
+    color: white;
+    margin-top: 10px;
+}
+
+.clear:hover{
+    background-color: #A23645;
+}
+
+.bits{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 1;
+}
+
+.gir{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcome{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
