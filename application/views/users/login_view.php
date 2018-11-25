@@ -31,7 +31,7 @@
 
     <div class="nav-container">
       <nav>
-        <a href="#">About Us</a>
+        <a href="<?=base_url()?>home/about">About Us</a>
         <a href="#">Contact Us</a>
         <a href="#">Templates</a>
       </nav>

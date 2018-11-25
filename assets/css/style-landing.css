@@ -145,5 +145,62 @@ body{
     width: 30%;
     height: 400px;
     background-color: black;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
 }
+
+.box1:hover{
+    box-shadow: 0px 0px 10px black;
+}
+
+#temp1{
+    background-image: url("../img/temp1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp1:hover{
+    background-image: url("../img/temp1_black.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp2{
+    background-image: url("../img/temp2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp2:hover{
+    background-image: url("../img/temp2_black.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp3{
+    background-image: url("../img/temp3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp3:hover{
+    background-image: url("../img/temp3_black.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp4{
+    background-image: url("../img/temp4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp4:hover{
+    background-image: url("../img/temp4_black.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
 

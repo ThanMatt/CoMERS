@@ -9,6 +9,9 @@ class Home extends CI_Controller  {
     // $this->load->view('users/login_view');
   }
 
+  public function about() {
+    $this->load->view('about');
+  }
 }
 
 ?>
