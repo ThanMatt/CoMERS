@@ -56,7 +56,7 @@ td {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("../img/bg.jpg");
+    background-image: url("../../img/bamboo/bg.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -76,8 +76,25 @@ td {
     border-radius: 15px;
     border: 2px solid black;
     box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
-   /* animation: fade 1s ease-in-out 4s forwards normal;
+    /*display: block;*/
+    /* animation: fade 1s ease-in-out 4s forwards normal;
     opacity: 0;*/
+}
+
+.form-container-student{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
+    display: none;
 }
 
 .title{
@@ -93,7 +110,7 @@ td {
     position: absolute;
     top:0;
     left:0;
-    background-image: url("../img/logo.jpg");
+    background-image: url("../../img/bamboo/logo.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -106,7 +123,7 @@ td {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../img/welcome.jpg");
+    background-image: url("../../img/bamboo/welcome.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -117,7 +134,7 @@ td {
 .left-col{
     width: 100%;
     height: 100vh;
-    background-image: url("../img/left-bg.png");
+    background-image: url("../../img/bamboo/left-bg.png");
     background-size: cover;
     background-position: center;
     border-right: 5px solid #8c1616;
@@ -188,6 +205,95 @@ input[type=text]{
     }
 }
 
+.checkbox label a{
+    color: black;
+    text-decoration: none;
+}
+
+.checkbox label a:hover{
+    border-bottom: 1px solid #cc2020;
+    color: #cc2020;
+}
+
+/* TERMS AND CONDITIONS */
+/* =================================*/
+
+.terms-container{
+    height: 100vh;
+    background-image: url("../../img/bamboo/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.terms-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-box{
+    background-color: white;
+    height: 700px;
+    overflow: auto;
+    border: 1px solid black;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.studentnum{
+    z-index: 100;
+    cursor: pointer;
+    background-color: white;
+    position: absolute;
+    bottom: 100px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
+}
+
+.toggleform{
+    display: none;
+}
+
+.togglestudent{
+    display: block;
+}
+
+.edit-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.edit-button label{
+    font-family: arial;
+}
+
+.toedit{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.toedit:hover{
+    background-color: #b9494f;
+    padding: 20px 30px;
+}
 
 
 
