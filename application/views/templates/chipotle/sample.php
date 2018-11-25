@@ -111,6 +111,13 @@
             
         </div>
         
+        <!-- EDIT BUTTON -->
+          <div class="edit-button">
+            <label>Customize by Logging in!</label>
+            <button class="toedit">EDIT</button>
+          </div>
+        <!-- END EDIT BUTTON -->
+        
     </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
