@@ -30,7 +30,7 @@
 
     <div class="nav-container">
       <nav>
-        <a href="#">About Us</a>
+        <a href="<?=base_url()?>home/about">About Us</a>
         <a href="#">Contact Us</a>
         <a href="#">Templates</a>
       </nav>
@@ -76,12 +76,12 @@
     </div>
 
     <div class='container-fluid templates-container'>
-      <div class="box1" id="temp1"></div>
-      <div class="box1" id="temp2"></div>
-      <div class="box1" id="temp3"></div>
-      <div class="box1"></div>
-      <div class="box1"></div>
-      <div class="box1"></div>
+        <a href="#" class="box1" id="temp1"></a>
+        <a href="#" class="box1" id="temp2"></a>
+        <a href="#" class="box1" id="temp3"></a>
+        <a href="#" class="box1" id="temp4"></a>
+        <div class="box1"></div>
+        <div class="box1"></div>
     </div>
 
   </div>
