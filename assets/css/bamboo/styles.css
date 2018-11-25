@@ -262,6 +262,38 @@ input[type=text]{
     display: block;
 }
 
+.edit-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.edit-button label{
+    font-family: arial;
+}
+
+.toedit{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.toedit:hover{
+    background-color: #b9494f;
+    padding: 20px 30px;
+}
 
 
 

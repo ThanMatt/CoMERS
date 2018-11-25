@@ -24,7 +24,7 @@
       
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Registration</title>
+    <title>Bamboo</title>
 </head>
 
 <body>
@@ -141,6 +141,13 @@
             </div> 
             
         </div> <!-- End of second container fluid -->
+       
+    <!-- EDIT BUTTON -->
+      <div class="edit-button">
+        <label>Customize by Logging in!</label>
+        <button class="toedit">EDIT</button>
+      </div>
+    <!-- END EDIT BUTTON -->
         
     </div> <!-- End of main container fluid -->
     
