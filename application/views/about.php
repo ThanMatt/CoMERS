@@ -30,7 +30,7 @@
         
         <div class="nav-container">
             <nav>
-                <a href="#">Home</a>
+                <a href="<?=base_url()?>home">Home</a>
                 <a href="#">Contact Us</a>
                 <a href="#">Templates</a>
             </nav>
