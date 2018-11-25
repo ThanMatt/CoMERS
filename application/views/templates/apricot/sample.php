@@ -100,7 +100,14 @@
 
     </div>
     <!-- End of Main Box Container -->
-
+      
+      <!-- EDIT BUTTON -->
+      <div class="edit-button">
+        <label>Customize by Logging in!</label>
+        <button class="toedit">EDIT</button>
+      </div>
+      <!-- END EDIT BUTTON -->
+      
   </div>
   <!-- End of Main Container -->
 </body>
