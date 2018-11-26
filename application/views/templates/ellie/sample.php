@@ -22,7 +22,7 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/ellie/style-temp5.css">
 
-  <title>CoMERS</title>
+  <title>Ellie</title>
 </head>
 
 <body>
