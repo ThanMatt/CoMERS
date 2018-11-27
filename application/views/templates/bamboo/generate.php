@@ -24,7 +24,7 @@
       
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Bamboo</title>
+    <title><?=$generate->Title?></title>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                     <form class="col-sm-12 col-md-12 col-lg-10 form-container" id="ajax_form">
                         
                         <div class="title">
-                            <label>General Assembly</label>
+                            <label><?=$generate->Title?></label>
                         </div>
                         
                         <div class="form-group">
@@ -141,24 +141,6 @@
             </div> 
             
         </div> <!-- End of second container fluid -->
-       
-    <!-- EDIT BUTTON -->
-    <?php if(!$this->session->userdata('logged_in')):?>
-
-    <div class="edit-button">
-        <label>Customize by Logging in!</label>
-        <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
-    </div>
-
-    <?php else: ?>
-
-    <div class="edit-button">
-        <label>Edit this template!</label>
-        <a href="<?=base_url()?>edit/bamboo"><button class="toedit">EDIT</button></a>
-    </div>
-
-    <?php endif ?>
-    <!-- END EDIT BUTTON -->
         
     </div> <!-- End of main container fluid -->
     

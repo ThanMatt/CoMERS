@@ -129,7 +129,7 @@ body{
 
 .edit-button{
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -158,4 +158,14 @@ body{
 .toedit:hover{
     background-color: #b9494f;
     padding: 20px 30px;
+}
+
+.event-title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-title h1{
+  font-size: 4rem;
 }

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Apricot</title>
+  <title><?=$generate->Title?></title>
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/apricot/styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -21,7 +21,7 @@
       <div class="left-container">
 
         <label>Hello there,</label>
-        <label>Welcome to SBU</label>
+        <label><?=$generate->Title?></label>
         <form id="ajax_form">
           <input type="text" name="snum" id="txt_snum" placeholder="Enter Student Number..." required>
           <input type="submit" value="Login">
@@ -100,25 +100,6 @@
 
     </div>
     <!-- End of Main Box Container -->
-      
-      <!-- EDIT BUTTON -->
-      <!-- :: Changes div if the user is logged in or not -->
-      <?php if(!$this->session->userdata('logged_in')):?>
-
-      <div class="edit-button">
-          <label>Customize by Logging in!</label>
-          <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
-      </div>
-
-      <?php else: ?>
-
-      <div class="edit-button">
-          <label>Edit this template!</label>
-          <a href="<?=base_url()?>edit/apricot"><button class="toedit">EDIT</button></a>
-      </div>
-
-      <?php endif ?>
-      <!-- END EDIT BUTTON -->
       
   </div>
   <!-- End of Main Container -->

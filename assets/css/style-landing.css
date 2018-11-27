@@ -60,7 +60,7 @@ body{
 
 .login-container label{
     background-image: linear-gradient(to right, #E32F2F, #EC4E4E);
-    padding: 20px 50px;
+    padding: 20px;
     box-sizing: border-box;
     transition: all .5s linear;
 }
@@ -197,6 +197,18 @@ body{
 
 #temp4:hover{
     background-image: url("../img/temp4_black.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp5{
+    background-image: url("../img/temp5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#temp5:hover{
+    background-image: url("../img/temp5_black.jpg");
     background-size: cover;
     background-position: center;
 }
