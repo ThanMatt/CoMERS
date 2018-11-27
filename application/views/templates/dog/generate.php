@@ -19,44 +19,48 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css.map">
 
-  <!-- Personal CSS -->
-  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/ellie/style-temp5.css">
 
-  <title>Ellie</title>
+  <!-- Personal CSS -->
+  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/dandelion/style-temp4.css">
+
+  <title><?=$generate->Title?></title>
 </head>
 
 <body>
     <div class="container-fluid main-container">
-        
-        <div class="bits">
-            <img src="<?=base_url()?>assets/img/ellie/BITS.png" width="100px" height="100px">
-        </div>
       
-        <div class='col-6 content'>
-            <form class="col-12 form-cont">
-                <div>
-                    <h1>Event Title</h1>
+        <div class="content">
+            
+            <div class="circ-logo">
+                <img src="<?=base_url()?>assets/img/dandelion/BITS.png" width="100px" height="100px">
+            </div>
+                
+            <form class="col-10 form-cont">
+
+                <div class="event-title">
+                  <h1><?=$generate->Title?></h1>
                 </div>
+
                 <div class="form-group">
                     <label>Student ID</label>
-                    <input type="text" class="form-control" placeholder="Enter Student ID..">
+                    <input type="text" class="form-control" placeholder="Enter Student ID.." required>
                 </div>
                 <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" class="form-control" placeholder="Your Last Name..">
+                    <input type="text" class="form-control" placeholder="Your Last Name.." required>
                 </div>
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" class="form-control" placeholder="Your First Name..">
+                    <input type="text" class="form-control" placeholder="Your First Name.." required>
                 </div>
                 <div class="form-group">
                     <label>Middle Name</label>
-                    <input type="text" class="form-control" placeholder="Your Middle Name..">
+                    <input type="text" class="form-control" placeholder="Your Middle Name.." required>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-sm-6">
                         <label for="exampleFormControlSelect1">Year</label>
-                        <select class="form-control" id="year">
+                        <select class="form-control" id="year" required>
                           <option>1st Year</option>
                           <option>2nd Year</option>
                           <option>3rd Year</option>
@@ -65,12 +69,12 @@
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="exampleInput">Section</label>
-                        <input type="text" class="form-control" name="" id="" placeholder="Enter Section">
+                        <input type="text" class="form-control" name="" id="" placeholder="Enter Section" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Course</label>
-                    <select class="form-control" id="">
+                    <select class="form-control" id="" required>
                         <option>Accountancy</option>
                         <option>Economics</option>
                         <option>Entrepreneurship</option>
@@ -86,28 +90,11 @@
                 </div>
 
                 <button type="submit" class="submit col-sm btn btn-lg">Submit</button>
-                <button type="clear" class="clear col-sm btn btn-sm">Clear</button>
+                <button type="reset" class="clear col-sm btn btn-sm">Clear</button>
 
             </form>
+            
         </div>
-        
-        <!-- EDIT BUTTON -->
-        <?php if(!$this->session->userdata('logged_in')):?>
-
-        <div class="edit-button">
-            <label>Customize by Logging in!</label>
-            <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
-        </div>
-
-        <?php else: ?>
-
-        <div class="edit-button">
-            <label>Edit this template!</label>
-            <a href="<?=base_url()?>edit/ellie"><button class="toedit">EDIT</button></a>
-        </div>
-
-        <?php endif ?>
-        <!-- END EDIT BUTTON -->
         
     </div> <!-- End of main-container -->
   <!-- Optional JavaScript -->
@@ -129,7 +116,7 @@
   </script>
 
   <!--Personal Javascript -->
-  <script src="<?=base_url()?>assets/js/script.js">
+  <script src="<?=base_url()?>assets/js/dandelion/script.js">
   </script>
 </body>
 

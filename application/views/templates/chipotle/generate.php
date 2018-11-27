@@ -23,7 +23,7 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/chipotle/style-temp3.css">
 
-  <title>Chipotle</title>
+  <title><?=$generate->Title?></title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
         
             <div class="col-sm-6 form-container">
             
-                <h1 class="title">Event Name</h1>
+                <h1 class="title"><?=$generate->Title?></h1>
                 
                 <form>
                     <div class="col-lg-6 col-md-12 col-sm-12 form-group">
@@ -109,26 +109,7 @@
                 
             </div>
             
-        </div>
-        
-        <!-- EDIT BUTTON -->
-        <?php if(!$this->session->userdata('logged_in')):?>
-
-        <div class="edit-button">
-            <label>Customize by Logging in!</label>
-            <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
-        </div>
-
-        <?php else: ?>
-
-        <div class="edit-button">
-            <label>Edit this template!</label>
-            <a href="<?=base_url()?>edit/chipotle"><button class="toedit">EDIT</button></a>
-        </div>
-
-        <?php endif ?>
-        <!-- END EDIT BUTTON -->
-        
+        </div>  
     </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -90,25 +90,7 @@
 
             </form>
         </div>
-        
-        <!-- EDIT BUTTON -->
-        <?php if(!$this->session->userdata('logged_in')):?>
-
-        <div class="edit-button">
-            <label>Customize by Logging in!</label>
-            <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
-        </div>
-
-        <?php else: ?>
-
-        <div class="edit-button">
-            <label>Edit this template!</label>
-            <a href="<?=base_url()?>edit/ellie"><button class="toedit">EDIT</button></a>
-        </div>
-
-        <?php endif ?>
-        <!-- END EDIT BUTTON -->
-        
+  
     </div> <!-- End of main-container -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

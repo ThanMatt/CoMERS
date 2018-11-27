@@ -60,7 +60,7 @@ body{
 
 .login-container label{
     background-image: linear-gradient(to right, #E32F2F, #EC4E4E);
-    padding: 20px 50px;
+    padding: 20px;
     box-sizing: border-box;
     transition: all .5s linear;
 }

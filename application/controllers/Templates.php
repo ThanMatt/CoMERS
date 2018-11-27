@@ -12,8 +12,12 @@ class Templates extends CI_Controller {
     $this->load->view('templates/chipotle/sample');
   }
 
-  public function dandelion() {
-    $this->load->view('templates/dandelion/sample');
+  public function dog() {
+    $this->load->view('templates/dog/sample');
+  }
+
+  public function ellie() {
+    $this->load->view('templates/ellie/sample');
   }
 
   public function ellie() {
