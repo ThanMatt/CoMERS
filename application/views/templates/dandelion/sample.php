@@ -23,7 +23,7 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/dandelion/style-temp4.css">
 
-  <title>CoMERS</title>
+  <title>Dandelion</title>
 </head>
 
 <body>

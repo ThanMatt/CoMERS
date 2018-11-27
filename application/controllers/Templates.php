@@ -19,6 +19,10 @@ class Templates extends CI_Controller {
   public function ellie() {
     $this->load->view('templates/ellie/sample');
   }
+
+  public function ellie() {
+    $this->load->view('templates/ellie/sample');
+  }
 }
 
 ?>
