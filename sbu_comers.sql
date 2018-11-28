@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 25, 2018 at 08:02 AM
+-- Generation Time: Nov 28, 2018 at 02:48 AM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -58,9 +58,23 @@ INSERT INTO `accounts` (`Account_ID`, `Pass`, `Organization`) VALUES
 
 CREATE TABLE IF NOT EXISTS `registration_systems` (
   `System_ID` varchar(20) NOT NULL,
+  `Register_Name` varchar(15) NOT NULL,
   `Account_ID` varchar(20) NOT NULL,
-  `Title` text NOT NULL
+  `Title` text NOT NULL,
+  `Logo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registration_systems`
+--
+
+INSERT INTO `registration_systems` (`System_ID`, `Register_Name`, `Account_ID`, `Title`, `Logo`) VALUES
+('108843', 'Apricot', 'BITS', 'dasdas', '003.jpg'),
+('703753', 'Apricot', 'BITS', 'adsda', '0031.jpg'),
+('736657', 'Bamboo', 'BITS', 'Gratitude', 'SBRL_logo.jpg'),
+('740090', 'Apricot', 'BITS', 'dasdadssda', 'Gwaping.jpg'),
+('801339', 'Dog', 'JFINMA', 'Body Wars', 'SC_logo.png'),
+('816006', 'Chipotle', 'BITS', 'General Assembly', 'PSSBU_logo.jpg');
 
 --
 -- Indexes for dumped tables

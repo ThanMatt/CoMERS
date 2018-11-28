@@ -32,7 +32,7 @@
         <div class="content">
             
             <div class="circ-logo">
-                <img src="<?=base_url()?>assets/img/dandelion/BITS.png" width="100px" height="100px">
+                <img src="<?=base_url()?>assets/uploads/<?=$generate->Logo?>" width="100px" height="100px">
             </div>
                 
             <form class="col-10 form-cont">

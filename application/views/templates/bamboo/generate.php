@@ -40,7 +40,7 @@
         <div class="container-fluid view-container">
             
             <div class="bits">
-                <img src="<?=base_url()?>assets/img/bamboo/BITS%20Logo.png" width="100px" height="100px">
+                <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
             </div>
             
             <div class="row no-gutters">
