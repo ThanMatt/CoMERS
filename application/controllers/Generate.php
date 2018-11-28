@@ -34,9 +34,50 @@ class Generate extends CI_Controller {
     } else {
       echo json_encode($response);
     }
+  }
 
+  public function edit() {
+    $response = array();
 
+    $account_id = $this->session->userdata('account_id');
+    $event_name = $this->input->post('event_name', true);
+    $system_id = $this->input->post('system_id', true);
 
+    $config = array(
+      'upload_path' => 'assets/img/uploads/',
+      'allowed_types' => 'jpg|jpeg|png',
+    );
+
+    $this->load->library('upload', $config);
+    $this->upload->initialize($config);
+
+    if (!$this->upload->do_upload('image_file')) {
+      $logo = '';
+    } else {
+      $data = $this->upload->data();
+      $logo = $data['file_name'];
+    }
+
+    if ($this->templates_model->editContent($system_id, $account_id, $event_name, $logo)) {
+      $response['success'] = true;
+      echo json_encode($response);
+    } else {
+      echo json_encode($response);
+    }
+  }
+
+  public function delete() {
+    $response = array();
+
+    $system_id = $this->input->post('system_id', true);
+
+    if($this->templates_model->deleteContent($system_id, $this->session->userdata('account_id'))) {
+      $response['success'] = true;
+      echo json_encode($response);
+    } else {
+      $response['success'] = false;
+      echo json_encode($response);
+    }
   }
 
 

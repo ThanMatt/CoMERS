@@ -23,6 +23,11 @@ class Accounts extends CI_Controller {
       $this->session->set_userdata($account_data);
 
       $response['success'] = true;
+
+      if ($this->session->userdata('referred_from')) {
+        $response['referred'] = $this->session->userdata('referred_from');
+        $this->session->unset_userdata('referred_from');
+      }
       echo json_encode($response);
     } else {
       $response['success'] = false;

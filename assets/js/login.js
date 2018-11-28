@@ -11,7 +11,11 @@ $(function () {
       dataType: 'json',
       success: function (response) {
         if (response.success) {
-          window.location.replace("home");
+          if (response.referred != null) {
+            window.location.replace(response.referred);
+          } else {
+            window.location.replace("home");
+          }
         } else {
           $("#login_btn").effect("shake");
         }

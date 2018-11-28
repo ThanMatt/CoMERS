@@ -25,6 +25,11 @@ class Registration extends CI_Controller {
     $data['generate'] = $this->templates_model->getMyTemplate($id);
     $this->load->view('templates/ellie/generate', $data);
   }
+
+  public function flap($id) {
+    $data['generate'] = $this->templates_model->getMyTemplate($id);
+    $this->load->view('templates/flap/generate', $data);
+  }
 }
 
 ?>
