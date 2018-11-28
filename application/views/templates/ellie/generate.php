@@ -22,14 +22,14 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/ellie/style-temp5.css">
 
-  <title>Ellie</title>
+  <title><?=$generate->Title?></title>
 </head>
 
 <body>
     <div class="container-fluid main-container">
         
         <div class="bits">
-            <img src="<?=base_url()?>assets/img/ellie/BITS.png" width="100px" height="100px">
+            <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
         </div>
       
         <div class='col-6 content'>

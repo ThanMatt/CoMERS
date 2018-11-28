@@ -2,12 +2,13 @@
 
 class Templates_Model extends CI_Model {
 
-  public function generateContent($system_id, $register_name, $account_id, $title) {
+  public function generateContent($system_id, $register_name, $account_id, $title, $logo) {
     $data = array(
       'System_ID' => $system_id,
       'Register_Name' => $register_name,
       'Account_ID' => $account_id,
       'Title' => $title,
+      'Logo' => $logo
     );
 
     $result = $this->db->insert('registration_systems', $data);

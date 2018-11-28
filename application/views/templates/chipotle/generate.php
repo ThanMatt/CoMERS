@@ -105,7 +105,7 @@
             
             <div class="col-sm-4 picture-container">
             
-                <h1>Height: 500px</h1>
+              <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" height="500px">
                 
             </div>
             
