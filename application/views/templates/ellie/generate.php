@@ -35,7 +35,7 @@
         <div class='col-6 content'>
             <form class="col-12 form-cont">
                 <div>
-                    <h1>Event Title</h1>
+                    <h1><?=$generate->Title?></h1>
                 </div>
                 <div class="form-group">
                     <label>Student ID</label>

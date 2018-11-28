@@ -30,6 +30,12 @@ class Edit extends CI_Controller {
 
     $this->load->view('edit_temp', $data);
   }
+
+  public function flap() {
+    $data['name'] = 'Flap';
+
+    $this->load->view('edit_temp', $data);
+  }
 }
 
 ?>

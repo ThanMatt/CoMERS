@@ -15,12 +15,65 @@ $(function () {
       dataType: 'json',
       success: function (response) {
         alert('Generation successful');
-        window.location.replace(BASE_URL + 'registration/' + register_name.toLowerCase() + '/' + response.id);
+        window.location.replace(BASE_URL + 'home/works');
       },
       error: function (response) {
         alert("There was an error generating your template!");
       }
     });
+  });
+
+  $('#edit-temp').on('submit', function (e) {
+    e.preventDefault();
+
+    var system_id = $('#system-id').val();
+    var event_name = $('#event-name').val();
+
+    $.ajax({
+      type: 'POST',
+      url: BASE_URL + 'generate/edit',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      dataType: 'json',
+      success: function (response) {
+        alert('Edit successful');
+        window.location.replace(BASE_URL + 'home/works');
+      },
+      error: function (response) {
+        alert("There was an error generating your template!");
+      }
+    });
+  });
+
+  $(document).on('click', '.delete-content', function() {
+    
+    var delete_buttonID = $(this).attr('id');
+    var system_id = delete_buttonID.split("/")[1];
+
+    if (confirm("Deleting this won't undo your actions")) {
+
+      $.ajax({
+        type: 'POST',
+        url: BASE_URL + 'generate/delete',
+        data: {
+          system_id: system_id,
+        },
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            alert("Deletion successful!");
+            location.reload();
+          } else {
+            alert("There was an error!");
+          }
+        },
+        error: function (response) {
+          alert("There was an error");
+        }
+      });
+    }
   });
 
 });

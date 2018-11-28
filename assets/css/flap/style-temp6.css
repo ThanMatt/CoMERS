@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #262626;
+    background-image: url("../../img/flap/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+}
+
+.left{
+    height: 100%;
+    background-image: url("../../img/flap/bg.jpg");
+}
+
+.right{
+    height: 100%;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.event-title{
+    display: flex;
+    justify-content: center;
+}
+
+.event-title h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.submit{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ff8f56;
+    color: white;
+    margin: 10px 0px;
+}
+
+.clear{
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ff5959;
+    color: white;
+    margin: 10px 0px;
+}
+
+.circ-logo{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 1;
+    background-color: #ececec;
+    border-radius: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.edit-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.edit-button label{
+    font-family: arial;
+}
+
+.toedit{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.toedit:hover{
+    background-color: #b9494f;
+    padding: 20px 30px;
+}
+

@@ -42,19 +42,19 @@
         
         <div class="col-lg-6 col-sm-8 col-xs-6 container-fluid content-box">
            
-            <form class="form-container" id="edit-regis" enctype="multipart/form-data">
+            <form class="form-container" id="edit-temp" enctype="multipart/form-data">
                 <div class="form-group">
-                    <center><h1>Edit your <?=$name?> Registration</h1></center>
+                    <center><h1>Edit <?=$records->Title?> </h1></center>
                 </div>
                 <div class="form-group">
                     <label>Event Name</label>
-                    <input type="text" class="form-control" name="register_name" placeholder="You're not supposed to see this" value="<?=$name?>" id="regis-name" readonly hidden>
-                    <input type="text" class="form-control" name="event_name" id="event-name" placeholder="Enter Event Name.." required>
+                    <input type="text" class="form-control" name="system_id" id="system-id" placeholder="You're not supposed to see this to be honest..." value="<?=$records->System_ID?>" hidden readonly required>
+                    <input type="text" class="form-control" name="event_name" id="event-name" placeholder="Enter Event Name.." value="<?=$records->Title?>" required>
                     <small class="form-text text-muted">The title for your Event / Activity</small>
                 </div>   
                 <label>Logo</label>
                 <div class="custom-file" id="uploaded_image">
-                    <input type="file" id="image_file" name="image_file">
+                    <input type="file" id="image_file" name="image_file" value="<?=$records->Logo?>">
                     <!-- <label class="custom-file-label" for="image_file" id="uploaded_image">Choose file</label> -->
                     <small class="form-text text-muted">Upload an image of your logo, preferably 75x75 pixels</small>
                 </div>

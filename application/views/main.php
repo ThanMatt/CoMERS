@@ -32,7 +32,7 @@
       <nav>
         <a href="<?=base_url()?>home/about">About Us</a>
         <a href="#">Contact Us</a>
-        <a href="#">Your Works</a>
+        <a href="<?=base_url()?>home/works">Your Works</a>
       </nav>
     </div> <!-- End of Nav-Container -->
 
@@ -81,7 +81,7 @@
         <a href="<?=base_url()?>templates/chipotle" target="_blank" class="box1" id="temp3"></a>
         <a href="<?=base_url()?>templates/dog" target="_blank" class="box1" id="temp4"></a>
         <a href="<?=base_url()?>templates/ellie" target="_blank" class="box1" id="temp5"></a>
-        <div class="box1"></div>
+        <a href="<?=base_url()?>templates/flap" target="_blank" class="box1" id="temp6"></a>
     </div>
 
   </div>
