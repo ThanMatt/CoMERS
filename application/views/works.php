@@ -67,7 +67,7 @@
             </div>
           <?php endforeach ?>  
           <?php else: ?>
-            <h2>No Works</h2>
+            <h2 class='no-works'>No Works</h2>
           <?php endif ?>
         </div> <!-- End of Content -->
 

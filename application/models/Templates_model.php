@@ -63,6 +63,8 @@ class Templates_Model extends CI_Model {
     } else if ($row == 'Ellie') {
       return 'temp5.jpg';
       
+    } else if ($row == 'Flap') {
+      return 'temp6.jpg';
     } else {
       return 'sample.jpg';
     }

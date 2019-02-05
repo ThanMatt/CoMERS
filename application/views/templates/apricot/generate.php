@@ -49,13 +49,13 @@
         </div>
 
         <div class="register">
-          <form action="register.php" method="POST">
-            <input class="txtbox" type="text" name="fname" id="fname" placeholder="Enter First Name.." required>
-            <input class="txtbox" type="text" name="mi" id="mi" placeholder="Enter Middle Initial.." required>
-            <input class="txtbox" type="text" name="lname" id="lname" placeholder="Enter Last Name.." required>
-            <input class="txtbox" type="text" name="snum" id="txt_snum2" placeholder="Enter Student Number.." required>
+          <form id="ajax_form">
+            <input class="txtbox" type="text" name="first-name" id="fname" placeholder="Enter First Name.." required>
+            <input class="txtbox" type="text" name="middle-initial" id="mi" placeholder="Enter Middle Initial.." required>
+            <input class="txtbox" type="text" name="last-name" id="lname" placeholder="Enter Last Name.." required>
+            <input class="txtbox" type="text" name="student-id" id="txt_snum2" placeholder="Enter Student Number.." required>
             <div class="no-dept">
-              <select name="yrlvl">
+              <select name="year-level">
                 <option>1st Year</option>
                 <option>2nd Year</option>
                 <option>3rd Year</option>

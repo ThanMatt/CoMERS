@@ -23,7 +23,7 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/dandelion/style-temp4.css">
 
-  <title><?=$generate->Title?></title>
+  <title>Dandelion</title>
 </head>
 
 <body>
@@ -32,36 +32,30 @@
         <div class="content">
             
             <div class="circ-logo">
-                <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
+                <img src="<?=base_url()?>assets/img/dandelion/BITS.png" width="100px" height="100px">
             </div>
                 
-            <form class="col-10 form-cont" id="ajax_form">
-
-                <div class="event-title">
-                  <h1><?=$generate->Title?></h1>
-                </div>
-
+            <form class="col-10 form-cont">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
                     <label>Student ID</label>
-                    <input type="text" class="form-control" placeholder="Enter Student ID.." name="student-id" required>
+                    <input type="text" class="form-control" placeholder="Enter Student ID.." required>
                 </div>
                 <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" class="form-control" placeholder="Your Last Name.." name="last-name" required>
+                    <input type="text" class="form-control" placeholder="Your Last Name.." required>
                 </div>
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" class="form-control" placeholder="Your First Name.." name="first-name" required>
+                    <input type="text" class="form-control" placeholder="Your First Name.." required>
                 </div>
                 <div class="form-group">
-                    <label>Middle Initial</label>
-                    <input type="text" class="form-control" placeholder="Your Middle Initial.." name="middle-initial" required>
+                    <label>Middle Name</label>
+                    <input type="text" class="form-control" placeholder="Your Middle Name.." required>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-sm-6">
                         <label for="exampleFormControlSelect1">Year</label>
-                        <select class="form-control" id="year" name="year-level" required>
+                        <select class="form-control" id="year" required>
                           <option>1st Year</option>
                           <option>2nd Year</option>
                           <option>3rd Year</option>
@@ -70,12 +64,12 @@
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="exampleInput">Section</label>
-                        <input type="text" class="form-control" name="section" id="" placeholder="Enter Section" required>
+                        <input type="text" class="form-control" name="" id="" placeholder="Enter Section" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Course</label>
-                    <select class="form-control" id="" name="course" required>
+                    <select class="form-control" id="" required>
                         <option>Accountancy</option>
                         <option>Economics</option>
                         <option>Entrepreneurship</option>
@@ -97,10 +91,19 @@
             
         </div>
         
+    <!-- EDIT BUTTON -->
+      <div class="edit-button">
+        <label>Customize by Logging in!</label>
+        <button class="toedit">EDIT</button>
+      </div>
+    <!-- END EDIT BUTTON -->
+        
     </div> <!-- End of main-container -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="<?= base_url();?>assets/js/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous">
   </script>
@@ -115,18 +118,7 @@
   </script>
 
   <!--Personal Javascript -->
-  
   <script src="<?=base_url()?>assets/js/dandelion/script.js">
-  </script>
-  
-  <script src="<?=base_url()?>assets/js/dandelion/script.js">
-  </script>
-
-  <script type="text/javascript">
-    var BASE_URL = "<?=base_url()?>";
-  </script>
-
-  <script src="<?=base_url()?>assets/js/register.js">
   </script>
 </body>
 

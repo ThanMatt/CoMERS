@@ -33,30 +33,31 @@
         </div>
       
         <div class='col-6 content'>
-            <form class="col-12 form-cont">
+            <form class="col-12 form-cont" id="ajax_form">
                 <div>
+                    <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
                     <h1><?=$generate->Title?></h1>
                 </div>
                 <div class="form-group">
                     <label>Student ID</label>
-                    <input type="text" class="form-control" placeholder="Enter Student ID..">
+                    <input type="text" class="form-control" placeholder="Enter Student ID.." name="student-id">
                 </div>
                 <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" class="form-control" placeholder="Your Last Name..">
+                    <input type="text" class="form-control" placeholder="Your Last Name.." name="last-name">
                 </div>
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" class="form-control" placeholder="Your First Name..">
+                    <input type="text" class="form-control" placeholder="Your First Name.." name="first-name">
                 </div>
                 <div class="form-group">
-                    <label>Middle Name</label>
-                    <input type="text" class="form-control" placeholder="Your Middle Name..">
+                    <label>Middle Initial</label>
+                    <input type="text" class="form-control" placeholder="Your Middle Initial.." name="middle-initial">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-sm-6">
                         <label for="exampleFormControlSelect1">Year</label>
-                        <select class="form-control" id="year">
+                        <select class="form-control" id="year" name="year-level">
                           <option>1st Year</option>
                           <option>2nd Year</option>
                           <option>3rd Year</option>
@@ -65,12 +66,12 @@
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="exampleInput">Section</label>
-                        <input type="text" class="form-control" name="" id="" placeholder="Enter Section">
+                        <input type="text" class="form-control" name="section" placeholder="Enter Section">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Course</label>
-                    <select class="form-control" id="">
+                    <select class="form-control" name="course">
                         <option>Accountancy</option>
                         <option>Economics</option>
                         <option>Entrepreneurship</option>
@@ -94,9 +95,7 @@
     </div> <!-- End of main-container -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous">
-  </script>
+  <script src="<?= base_url();?>assets/js/jquery-3.3.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous">
   </script>
@@ -112,6 +111,13 @@
 
   <!--Personal Javascript -->
   <script src="<?=base_url()?>assets/js/script.js">
+  </script>
+
+  <script type="text/javascript">
+    var BASE_URL = "<?=base_url()?>";
+  </script>
+
+  <script src="<?=base_url()?>assets/js/register.js">
   </script>
 </body>
 

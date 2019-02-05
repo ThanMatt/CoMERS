@@ -5,8 +5,8 @@ class Accounts extends CI_Controller {
 
     $response = array();
 
-    $account_id = $this->input->post('account_id');
-    $password = $this->input->post('password');
+    $account_id = $this->input->post('account_id', true);
+    $password = $this->input->post('password', true);
 
     if ($this->accounts_model->validate($account_id, $password)) {
 
