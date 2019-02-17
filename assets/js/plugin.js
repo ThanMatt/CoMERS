@@ -47,8 +47,8 @@ $(function () {
     });
   });
 
-  $(document).on('click', '.delete-content', function() {
-    
+  $(document).on('click', '.delete-content', function () {
+
     var delete_buttonID = $(this).attr('id');
     var system_id = delete_buttonID.split("/")[1];
 
@@ -61,7 +61,7 @@ $(function () {
           system_id: system_id,
         },
         dataType: 'json',
-        success: function(response) {
+        success: function (response) {
           if (response.success) {
             alert("Deletion successful!");
             location.reload();
@@ -71,6 +71,64 @@ $(function () {
         },
         error: function (response) {
           alert("There was an error");
+        }
+      });
+    }
+  });
+
+  $(document).on('click', '.deploy-content', function () {
+
+    var deploy_buttonID = $(this).attr('id');
+    var system_id = deploy_buttonID.split("/")[1];
+
+    if (confirm("Your registration will become publicly available. Proceed?")) {
+
+      $.ajax({
+        type: 'POST',
+        url: BASE_URL + 'generate/deploy',
+        data: {
+          system_id: system_id,
+        },
+        dataType: 'json',
+        success: function (response) {
+          if (response.success) {
+            alert("Deployment Successful");
+            location.reload();
+          } else {
+            alert("There was an error!");
+          }
+        },
+        error: function (response) {
+          alert("There was an unexpected error");
+        }
+      });
+    }
+  });
+
+  $(document).on('click', '.undeploy-content', function () {
+
+    var deploy_buttonID = $(this).attr('id');
+    var system_id = deploy_buttonID.split("/")[1];
+
+    if (confirm("Your registration will be closed. Proceed?")) {
+
+      $.ajax({
+        type: 'POST',
+        url: BASE_URL + 'generate/deploy',
+        data: {
+          system_id: system_id,
+        },
+        dataType: 'json',
+        success: function (response) {
+          if (response.success) {
+            alert("Close Successful");
+            location.reload();
+          } else {
+            alert("There was an error!");
+          }
+        },
+        error: function (response) {
+          alert("There was an unexpected error");
         }
       });
     }

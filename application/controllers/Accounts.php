@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 class Accounts extends CI_Controller {
   public function login() {
 
     $response = array();
 
-    $account_id = $this->input->post('account_id');
-    $password = $this->input->post('password');
+    $account_id = $this->input->post('account_id', true);
+    $password = $this->input->post('password', true);
 
     if ($this->accounts_model->validate($account_id, $password)) {
 
@@ -18,7 +18,7 @@ class Accounts extends CI_Controller {
         'organization' => $records['Organization'],
         'logged_in' => true,
       );
-      
+
       //:: Creates session using the account data
       $this->session->set_userdata($account_data);
 

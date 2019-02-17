@@ -213,6 +213,19 @@ body{
     background-position: center;
 }
 
+#temp6{
+  background-image: url("../img/temp6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#temp6:hover{
+  background-image: url("../img/temp6_black.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 
 

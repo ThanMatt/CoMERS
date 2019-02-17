@@ -63,11 +63,16 @@
                 <a href="" id="delete-btn/<?=$work->System_ID?>" class="btn btn-danger delete-content">Delete</a>
                 <a href="<?=base_url()?>templates/edit/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">Edit</a>
                 <a href="<?=base_url()?>registration/<?=strtolower($work->Register_Name)?>/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">View</a>
+                <?php if ($this->templates_model->checkStatus($work->System_ID, $this->session->userdata('account_id'))):?>
+                  <a href="" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger deploy-content">Deploy</a>
+                <?php else: ?>
+                  <a href="" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger undeploy-content">Undeploy</a>
+                <?php endif ?>
               </div>
             </div>
           <?php endforeach ?>  
           <?php else: ?>
-            <h2>No Works</h2>
+            <h2 class='no-works'>No Works</h2>
           <?php endif ?>
         </div> <!-- End of Content -->
 

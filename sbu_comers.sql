@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2018 at 02:48 AM
+-- Generation Time: Feb 05, 2019 at 07:46 AM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -39,7 +39,6 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 INSERT INTO `accounts` (`Account_ID`, `Pass`, `Organization`) VALUES
 ('BITS', '$2y$12$.Nvxa0xvWjqajbKiXbLYCut2wj7QIpI2IG87SXFfb6Fa90wtvOPH6', 'Bedan Information Technology Society'),
 ('HRDMS', '$2y$12$4N6X0.K1JAVGyWtVXHZUse.NvvhZD7IWIc7L1Zi.FH6TpB8pw3tjy', 'Human Resource Development Management Society'),
-('JBLC', 'infotech', 'Junior Bedan Law Circle'),
 ('JFINMA', '$2y$12$m8jmHfsLScITt54BG5pWouIyJ1t8F1vSX1b1OP0C1FVzMbSHtkgPa', 'Junior Financial Management Association'),
 ('JPIA', '$2y$12$25ZnYEy.4cCI18nh9YAXk.5fXaYms6vgZuTPvOD8u/68RqjbibV7a', 'Junior Philippine Institute of Accountants'),
 ('KASB', '$2y$12$e9jXjcxa3vTvRSXHC7VaLu4TIicCndQzD13uQhekXQHu1.TOfGbie', 'Kapisanang Agham ng San Beda'),
@@ -49,6 +48,27 @@ INSERT INTO `accounts` (`Account_ID`, `Pass`, `Organization`) VALUES
 ('SBJMA', '$2y$12$S7FAyiUOkGHTjc5TgZq5T.tIYFK6avBHeZhLFSNzCW2MKRwtcZFwO', 'San Beda Junior Marketing Association'),
 ('SC', '$2y$12$Q5i25i7zpxND.k10BfIK9uUhgjq5EmBCWgiTzoK/a.Hu0usrBPUrC', 'Student Council'),
 ('SOMS', '$2y$12$KdMYQjXr.S8nHQhUZil2AuGyG.SlYdDey69oC6.t7lOoZcPlJhFLm', 'Society of Operations Management Students');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance`
+--
+
+CREATE TABLE IF NOT EXISTS `attendance` (
+  `ID` int(11) NOT NULL,
+  `Student_ID` varchar(10) NOT NULL,
+  `Last_Name` varchar(50) NOT NULL,
+  `First_Name` varchar(50) NOT NULL,
+  `Middle_Initial` varchar(20) NOT NULL,
+  `Year` varchar(10) NOT NULL,
+  `Section` varchar(10) NOT NULL,
+  `Course` varchar(50) NOT NULL,
+  `System_ID` varchar(20) NOT NULL,
+  `Title` varchar(70) NOT NULL,
+  `Time_In` time NOT NULL,
+  `Date_In` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -69,12 +89,38 @@ CREATE TABLE IF NOT EXISTS `registration_systems` (
 --
 
 INSERT INTO `registration_systems` (`System_ID`, `Register_Name`, `Account_ID`, `Title`, `Logo`) VALUES
-('108843', 'Apricot', 'BITS', 'dasdas', '003.jpg'),
-('703753', 'Apricot', 'BITS', 'adsda', '0031.jpg'),
-('736657', 'Bamboo', 'BITS', 'Gratitude', 'SBRL_logo.jpg'),
-('740090', 'Apricot', 'BITS', 'dasdadssda', 'Gwaping.jpg'),
+('189291', 'Flap', 'PSSBU', 'General Assembly (Psych)', 'PSSBU_logo2.png'),
+('224942', 'Dog', 'BITS', 'ShareIT', 'BITS_Logo2.png'),
+('428051', 'Bamboo', 'BITS', 'hi', 'SBES_logo.jpg'),
+('514129', 'Chipotle', 'HRDMS', 'Yoshi: The HUMAN ZONE', 'HRDMS1.png'),
+('622509', 'Dog', 'PSSBU', 'Yoga', 'PSSBU_logo1.png'),
+('719821', 'Bamboo', 'SBES', 'Economic Zones', 'SBU.png'),
 ('801339', 'Dog', 'JFINMA', 'Body Wars', 'SC_logo.png'),
-('816006', 'Chipotle', 'BITS', 'General Assembly', 'PSSBU_logo.jpg');
+('904611', 'Ellie', 'HRDMS', 'Human Resources Zone 101', 'HRDMS.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE IF NOT EXISTS `student` (
+  `Student_ID` varchar(10) NOT NULL,
+  `Last_Name` varchar(50) NOT NULL,
+  `First_Name` varchar(50) NOT NULL,
+  `Middle_Initial` varchar(20) NOT NULL,
+  `Year` varchar(10) NOT NULL,
+  `Section` varchar(10) NOT NULL,
+  `Course` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`Student_ID`, `Last_Name`, `First_Name`, `Middle_Initial`, `Year`, `Section`, `Course`) VALUES
+('C-123456', 'Pedro', 'Don Juan', 'B.', '2', 'APS', 'Psychology'),
+('C-150623', 'Ilagan', 'Aethan Matthew', 'A', '4', 'AIT', 'Information Technology');
 
 --
 -- Indexes for dumped tables
@@ -87,11 +133,32 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`Account_ID`);
 
 --
+-- Indexes for table `attendance`
+--
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `registration_systems`
 --
 ALTER TABLE `registration_systems`
   ADD PRIMARY KEY (`System_ID`);
 
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`Student_ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `attendance`
+--
+ALTER TABLE `attendance`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

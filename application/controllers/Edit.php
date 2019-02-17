@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Edit extends CI_Controller {
   public function apricot() {
