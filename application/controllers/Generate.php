@@ -80,6 +80,19 @@ class Generate extends CI_Controller {
     }
   }
 
+  public function deploy() {
+    $response = array();
+
+    $system_id = $this->input->post('system_id', true);
+
+    if($this->templates_model->deployContent($system_id, $this->session->userdata('account_id'))) {
+      $response['success'] = true;
+    } else {
+      $response['success'] = false;
+    }
+    echo json_encode($response);
+  }
+
 
 }
 

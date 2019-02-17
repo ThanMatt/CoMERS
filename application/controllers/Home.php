@@ -19,6 +19,7 @@ class Home extends CI_Controller  {
 
       $records = $this->templates_model->getMyWorks($this->session->userdata('account_id'));
 
+
       if ($records) {
         $data['works'] = $records;
       }

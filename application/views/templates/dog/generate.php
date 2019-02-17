@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<?php if ($status): ?>
 <head>
 
   <!-- Required meta tags -->
@@ -22,7 +22,7 @@
 
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/dandelion/style-temp4.css">
-
+  
   <title><?=$generate->Title?></title>
 </head>
 
@@ -97,7 +97,9 @@
             
         </div>
         
-    </div> <!-- End of main-container -->
+    </div> 
+  <!-- End of main-container -->
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="<?= base_url();?>assets/js/jquery-3.3.1.js"></script>
@@ -128,6 +130,13 @@
 
   <script src="<?=base_url()?>assets/js/register.js">
   </script>
+
 </body>
+<?php else: ?>
+  <head>
+    <title>404 Not Found </title>
+  </head>
+  <?= "<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
+<?php endif?>
 
 </html>

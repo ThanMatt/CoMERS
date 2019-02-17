@@ -1,23 +1,46 @@
-<?php 
+<?php
 
 class Registration extends CI_Controller {
   public function apricot($id) {
-    $data['generate'] = $this->templates_model->getMyTemplate($id);
+    if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $data['status'] = true;
+    } else {
+      $data['status'] = false;
+    }
     $this->load->view('templates/apricot/generate', $data);
   }
 
   public function bamboo($id) {
-    $data['generate'] = $this->templates_model->getMyTemplate($id);
+    if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $data['status'] = true;
+
+    } else {
+      $data['status'] = false;
+    }
+
     $this->load->view('templates/bamboo/generate', $data);
   }
 
   public function chipotle($id) {
-    $data['generate'] = $this->templates_model->getMyTemplate($id);
+    if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $data['status'] = true;
+    } else {
+      $data['status'] = false;
+    }
+
     $this->load->view('templates/chipotle/generate', $data);
   }
 
   public function dog($id) {
-    $data['generate'] = $this->templates_model->getMyTemplate($id);
+    if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
+      $data['status'] = false;
+    } else {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $data['status'] = true;
+    }
     $this->load->view('templates/dog/generate', $data);
   }
 

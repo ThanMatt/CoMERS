@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Accounts extends CI_Controller {
   public function login() {
@@ -18,7 +18,7 @@ class Accounts extends CI_Controller {
         'organization' => $records['Organization'],
         'logged_in' => true,
       );
-      
+
       //:: Creates session using the account data
       $this->session->set_userdata($account_data);
 
