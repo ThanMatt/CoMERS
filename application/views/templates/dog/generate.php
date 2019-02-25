@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<?php if ($status): ?>
+<?php if ($this->session->userdata('account_id') == $generate->Account_ID): ?>
 <head>
 
   <!-- Required meta tags -->

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Templates_Model extends CI_Model {
 
@@ -9,7 +9,7 @@ class Templates_Model extends CI_Model {
       'Account_ID' => $account_id,
       'Title' => $title,
       'Logo' => $logo,
-      'Status' => 0
+      'Status' => 0,
     );
 
     $result = $this->db->insert('registration_systems', $data);
@@ -50,7 +50,7 @@ class Templates_Model extends CI_Model {
     $row = $rows->Register_Name;
 
     if ($row == 'Apricot') {
-      return 'temp1.jpg'; 
+      return 'temp1.jpg';
 
     } else if ($row == 'Bamboo') {
       return 'temp2.jpg';
@@ -63,7 +63,7 @@ class Templates_Model extends CI_Model {
 
     } else if ($row == 'Ellie') {
       return 'temp5.jpg';
-      
+
     } else if ($row == 'Flap') {
       return 'temp6.jpg';
     } else {
@@ -74,16 +74,16 @@ class Templates_Model extends CI_Model {
   public function editContent($system_id, $account_id, $event_name, $logo) {
 
     if ($logo == '') {
-      $data = array (
+      $data = array(
         'Title' => $event_name,
       );
     } else {
-      $data = array (
+      $data = array(
         'Title' => $event_name,
-        'Logo' => $logo
+        'Logo' => $logo,
       );
     }
-  
+
     $this->db->where('System_ID', $system_id);
     $this->db->where('Account_ID', $account_id);
     $result = $this->db->update('registration_systems', $data);
@@ -96,7 +96,6 @@ class Templates_Model extends CI_Model {
     $this->db->where('System_ID', $system_id);
     $this->db->where('Account_ID', $account_id);
     $result = $this->db->delete('registration_systems');
-
 
     return $result;
   }
@@ -121,7 +120,6 @@ class Templates_Model extends CI_Model {
       );
     }
 
-
     $this->db->where('System_ID', $system_id);
     $this->db->where('Account_ID', $account_id);
     $result = $this->db->update('registration_systems', $data);
@@ -130,24 +128,38 @@ class Templates_Model extends CI_Model {
   }
 
   public function checkStatus($system_id, $account_id) {
-    $this->db->where('System_ID', $system_id);
-    $this->db->where('Account_ID', $account_id);
-    $this->db->from('registration_systems');
 
-    $result = $this->db->get();
+    if ($account_id != null) {
 
-    $row = $result->row();
+      $this->db->where('System_ID', $system_id);
+      $this->db->where('Account_ID', $account_id);
+      $this->db->from('registration_systems');
 
-    if ($row->Status == 0) {
-      return true;
-    } else {
-      return false;
+      $result = $this->db->get();
+
+      $rows = $result->num_rows();
+
+      if ($rows == 1) { 
+        $this->db->where('System_ID', $system_id);
+        $this->db->where('Account_ID', $account_id);
+        $this->db->from('registration_systems');
+        
+        $result = $this->db->get();
+        
+        $row = $result->row();
+        
+        if ($row->Status == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return false;
+      }
     }
 
   }
 
-
 }
-
 
 ?>

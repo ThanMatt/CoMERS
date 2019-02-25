@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<?php if ($status && $this->session->userdata('account_id') == $generate->Account_ID): ?>
 <head>
 
   <!-- Required meta tags -->
@@ -120,5 +120,11 @@
   <script src="<?=base_url()?>assets/js/register.js">
   </script>
 </body>
+<?php else: ?>
+  <head>
+    <title>404 Not Found </title>
+  </head>
+  <?= "<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
+<?php endif?>
 
 </html>
