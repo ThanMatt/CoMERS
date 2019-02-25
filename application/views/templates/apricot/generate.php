@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-
+<?php if ($status && $this->session->userdata('account_id') == $generate->Account_ID): ?>
 <head>
   <title><?=$generate->Title?></title>
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/apricot/styles.css">
@@ -104,5 +104,10 @@
   </div>
   <!-- End of Main Container -->
 </body>
-
+<?php else: ?>
+  <head>
+    <title>404 Not Found </title>
+  </head>
+  <?= "<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
+<?php endif?>
 </html>
