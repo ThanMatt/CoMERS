@@ -1,4 +1,3 @@
-!.htaccess
 composer.json
 composer.lock
 application/logs/*
