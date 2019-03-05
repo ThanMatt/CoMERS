@@ -1,8 +1,6 @@
 .htaccess
 composer.json
 composer.lock
-application/config/*
-!application/config/autoload.php
 application/logs/*
 !application/logs/index.html
 vendor/
