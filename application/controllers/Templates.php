@@ -53,7 +53,6 @@ class Templates extends CI_Controller {
   }
 
 
-
 }
 
 ?>

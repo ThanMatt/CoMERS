@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.9
--- https://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 05, 2019 at 07:46 AM
--- Server version: 5.6.37
--- PHP Version: 5.6.31
+-- Host: 127.0.0.1
+-- Generation Time: Mar 05, 2019 at 03:33 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `accounts`
 --
 
-CREATE TABLE IF NOT EXISTS `accounts` (
+CREATE TABLE `accounts` (
   `Account_ID` varchar(30) NOT NULL,
   `Pass` text NOT NULL,
   `Organization` text NOT NULL
@@ -55,7 +55,7 @@ INSERT INTO `accounts` (`Account_ID`, `Pass`, `Organization`) VALUES
 -- Table structure for table `attendance`
 --
 
-CREATE TABLE IF NOT EXISTS `attendance` (
+CREATE TABLE `attendance` (
   `ID` int(11) NOT NULL,
   `Student_ID` varchar(10) NOT NULL,
   `Last_Name` varchar(50) NOT NULL,
@@ -68,7 +68,29 @@ CREATE TABLE IF NOT EXISTS `attendance` (
   `Title` varchar(70) NOT NULL,
   `Time_In` time NOT NULL,
   `Date_In` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('odpablvo8mfbasvmgd6gc46asle5cahs', '::1', 1551755938, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313735353735343b),
+('rpugvmeuknj1bfjn83jq9vl204bbfe31', '::1', 1551756294, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313735363039393b6163636f756e745f69647c733a343a2242495453223b6f7267616e697a6174696f6e7c733a33363a22426564616e20496e666f726d6174696f6e20546563686e6f6c6f677920536f6369657479223b6c6f676765645f696e7c623a313b),
+('pcre4otemu4h1ad81ktu34lnt67jdoif', '::1', 1551756272, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313735363236313b6163636f756e745f69647c733a353a225053534255223b6f7267616e697a6174696f6e7c733a34313a2250737963686f6c6f677920536f6369657479206f662053616e204265646120556e6976657273697479223b6c6f676765645f696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -76,27 +98,28 @@ CREATE TABLE IF NOT EXISTS `attendance` (
 -- Table structure for table `registration_systems`
 --
 
-CREATE TABLE IF NOT EXISTS `registration_systems` (
+CREATE TABLE `registration_systems` (
   `System_ID` varchar(20) NOT NULL,
   `Register_Name` varchar(15) NOT NULL,
   `Account_ID` varchar(20) NOT NULL,
   `Title` text NOT NULL,
-  `Logo` text NOT NULL
+  `Logo` text NOT NULL,
+  `Status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `registration_systems`
 --
 
-INSERT INTO `registration_systems` (`System_ID`, `Register_Name`, `Account_ID`, `Title`, `Logo`) VALUES
-('189291', 'Flap', 'PSSBU', 'General Assembly (Psych)', 'PSSBU_logo2.png'),
-('224942', 'Dog', 'BITS', 'ShareIT', 'BITS_Logo2.png'),
-('428051', 'Bamboo', 'BITS', 'hi', 'SBES_logo.jpg'),
-('514129', 'Chipotle', 'HRDMS', 'Yoshi: The HUMAN ZONE', 'HRDMS1.png'),
-('622509', 'Dog', 'PSSBU', 'Yoga', 'PSSBU_logo1.png'),
-('719821', 'Bamboo', 'SBES', 'Economic Zones', 'SBU.png'),
-('801339', 'Dog', 'JFINMA', 'Body Wars', 'SC_logo.png'),
-('904611', 'Ellie', 'HRDMS', 'Human Resources Zone 101', 'HRDMS.png');
+INSERT INTO `registration_systems` (`System_ID`, `Register_Name`, `Account_ID`, `Title`, `Logo`, `Status`) VALUES
+('189291', 'Flap', 'PSSBU', 'General Assembly (Psych)', 'PSSBU_logo2.png', 0),
+('224942', 'Dog', 'BITS', 'ShareIT', 'BITS_Logo2.png', 0),
+('428051', 'Bamboo', 'BITS', 'hi', 'SBES_logo.jpg', 0),
+('514129', 'Chipotle', 'HRDMS', 'Yoshi: The HUMAN ZONE', 'HRDMS1.png', 0),
+('622509', 'Dog', 'PSSBU', 'Yoga', 'PSSBU_logo1.png', 0),
+('719821', 'Bamboo', 'SBES', 'Economic Zones', 'SBU.png', 0),
+('801339', 'Dog', 'JFINMA', 'Body Wars', 'SC_logo.png', 0),
+('904611', 'Ellie', 'HRDMS', 'Human Resources Zone 101', 'HRDMS.png', 0);
 
 -- --------------------------------------------------------
 
@@ -104,7 +127,7 @@ INSERT INTO `registration_systems` (`System_ID`, `Register_Name`, `Account_ID`, 
 -- Table structure for table `student`
 --
 
-CREATE TABLE IF NOT EXISTS `student` (
+CREATE TABLE `student` (
   `Student_ID` varchar(10) NOT NULL,
   `Last_Name` varchar(50) NOT NULL,
   `First_Name` varchar(50) NOT NULL,
@@ -158,7 +181,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
