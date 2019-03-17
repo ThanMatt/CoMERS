@@ -32,10 +32,16 @@ class Events_Model extends CI_Model {
       return false;
     } else {
       return true;
-
     }
+  }
 
+  public function fetchAttendance($system_id) {
+    $this->db->where('System_ID', $system_id);
+    $this->db->from('attendance');
 
+    $result = $this->db->get();
+
+    return $result->result();
   }
 }
 

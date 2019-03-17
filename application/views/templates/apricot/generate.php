@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-<?php if ($status && $this->session->userdata('account_id') == $generate->Account_ID): ?>
+<?php if ($this->session->userdata('account_id') == $generate->Account_ID): ?>
 <head>
   <title><?=$generate->Title?></title>
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/apricot/styles.css">
