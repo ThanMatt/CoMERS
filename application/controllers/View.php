@@ -7,16 +7,9 @@ class View extends CI_Controller {
       $this->load->view('users/login_view');
     } else {
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
 
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/apricot/generate', $data);
+      $this->load->view('templates/apricot/view', $data);
     }
   }
 
@@ -25,17 +18,9 @@ class View extends CI_Controller {
       $this->session->set_userdata('referred_from', current_url());
       $this->load->view('users/login_view');
     } else {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/bamboo/generate', $data);
+      $this->load->view('templates/bamboo/view', $data);
     }
   }
 
@@ -45,16 +30,8 @@ class View extends CI_Controller {
       $this->load->view('users/login_view');
     } else {
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/chipotle/generate', $data);
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
+      $this->load->view('templates/chipotle/view', $data);
     }
   }
 
@@ -64,17 +41,9 @@ class View extends CI_Controller {
       $this->session->set_userdata('referred_from', current_url());
       $this->load->view('users/login_view');
     } else {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/dog/generate', $data);
+      $this->load->view('templates/dog/view', $data);
     }
   }
 
@@ -83,17 +52,9 @@ class View extends CI_Controller {
       $this->session->set_userdata('referred_from', current_url());
       $this->load->view('users/login_view');
     } else {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/ellie/generate', $data);
+      $this->load->view('templates/ellie/view', $data);
     }
   }
 
@@ -102,17 +63,9 @@ class View extends CI_Controller {
       $this->session->set_userdata('referred_from', current_url());
       $this->load->view('users/login_view');
     } else {
+      $data['generate'] = $this->templates_model->getMyTemplate($id);
 
-      if ($this->templates_model->checkStatus($id, $this->session->userdata('account_id'))) {
-        $data['status'] = false;
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-
-      } else {
-        $data['generate'] = $this->templates_model->getMyTemplate($id);
-        $data['status'] = true;
-      }
-
-      $this->load->view('templates/flap/generate', $data);
+      $this->load->view('templates/flap/view', $data);
     }
   }
 }
