@@ -22,6 +22,11 @@
   <title>Attendance</title>
 </head>
 <body>
+  <a href="<?=base_url()?>home/works" class="btn btn-danger">Go Back</a>
+  <a href="#" class="btn btn-danger">Print Attendance</a>
+  <center>
+    <h1><?=$system->Title?> attendance</h1>
+  </center>
   <table class="table table-striped">
     <thead>
       <tr>
