@@ -66,12 +66,10 @@
                 <a href="<?=base_url()?>templates/edit/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">Edit</a>
 
                 <a href="<?=base_url()?>view/<?=strtolower($work->Register_Name)?>/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">View</a>
+                <a href="<?=base_url()?>registration/events/<?=$work->System_ID?>" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger deploy-content" target="_blank">Deploy</a>
 
-                <?php if ($this->templates_model->checkStatus($work->System_ID, $this->session->userdata('account_id'))):?>
-                  <a href="<?=base_url()?>registration/events/<?=$work->System_ID?>" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger deploy-content" target="_blank">Deploy</a>
-                <?php else: ?>
-                  <a href="" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger undeploy-content">Undeploy</a>
-                <?php endif ?>
+                <a href="<?=base_url()?>registration/attendance/<?=strtolower($work->System_ID)?>" class="btn btn-danger">Attendance</a>
+                
               </div>
             </div>
           <?php endforeach ?>  

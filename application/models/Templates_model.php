@@ -9,7 +9,6 @@ class Templates_Model extends CI_Model {
       'Account_ID' => $account_id,
       'Title' => $title,
       'Logo' => $logo,
-      'Status' => 0,
     );
 
     $result = $this->db->insert('registration_systems', $data);
@@ -100,64 +99,23 @@ class Templates_Model extends CI_Model {
     return $result;
   }
 
-  public function deployContent($system_id, $account_id) {
 
+
+  public function isThisMyWork($system_id, $account_id) {
     $this->db->where('System_ID', $system_id);
     $this->db->where('Account_ID', $account_id);
+
     $this->db->from('registration_systems');
 
     $result = $this->db->get();
 
-    $row = $result->row();
+    $rows = $result->num_rows();
 
-    if ($row->Status == 0) {
-      $data = array(
-        'Status' => 1,
-      );
+    if ($rows == 1) {
+      return true;
     } else {
-      $data = array(
-        'Status' => 0,
-      );
+      return false;
     }
-
-    $this->db->where('System_ID', $system_id);
-    $this->db->where('Account_ID', $account_id);
-    $result = $this->db->update('registration_systems', $data);
-
-    return $result;
-  }
-
-  public function checkStatus($system_id, $account_id) {
-
-    if ($account_id != null) {
-
-      $this->db->where('System_ID', $system_id);
-      $this->db->where('Account_ID', $account_id);
-      $this->db->from('registration_systems');
-
-      $result = $this->db->get();
-
-      $rows = $result->num_rows();
-
-      if ($rows == 1) { 
-        $this->db->where('System_ID', $system_id);
-        $this->db->where('Account_ID', $account_id);
-        $this->db->from('registration_systems');
-        
-        $result = $this->db->get();
-        
-        $row = $result->row();
-        
-        if ($row->Status == 0) {
-          return true;
-        } else {
-          return false;
-        }
-      } else {
-        return false;
-      }
-    }
-
   }
 
 }
