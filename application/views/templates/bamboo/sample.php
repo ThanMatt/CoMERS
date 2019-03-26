@@ -96,17 +96,21 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Course</label>
                             <select class="form-control" id="">
-                                <option>Accountancy</option>
-                                <option>Economics</option>
-                                <option>Entrepreneurship</option>
-                                <option>Financial Management</option>
-                                <option>Human Biology</option>
-                                <option>Human Resource</option>
-                                <option>Information Technology</option>
-                                <option>Legal Management</option>
-                                <option>Marketing Management</option>
-                                <option>Operations Management</option>
-                                <option>Psychology</option>
+                              <option>Accountancy</option>
+                              <option>Economics</option>
+                              <option>English</option>
+                              <option>Entrepreneurship</option>
+                              <option>Financial Management</option>
+                              <option>Human Biology</option>
+                              <option>Human Resources</option>
+                              <option>Information Technology</option>
+                              <option>Legal Management</option>
+                              <option>Literature</option>
+                              <option>Marketing Management</option>
+                              <option>Operations Management</option>
+                              <option>Physical Education</option>
+                              <option>Political Science</option>
+                              <option>Psychology</option>
                             </select>
                         </div>
                         <div class="form-group form-check checkbox">
@@ -114,7 +118,7 @@
                             <label class="form-check-label" for="exampleCheck1"><a href="terms.html">I Accept the Terms and Conditions</a></label>
                         </div>
 
-                        <button type="submit" class="btn btn-lg">Submit</button>
+                        <button type="submit" class="btn btn-lg" disabled>Submit</button>
                     </form>
                     
                     <div class="studentnum">
@@ -132,7 +136,7 @@
                             <label for="exampleInput">Student ID</label>
                             <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID">
                         </div>
-                        <button type="submit" class="btn btn-lg">Submit</button>
+                        <button type="submit" class="btn btn-lg" disabled>Submit</button>
                         
                     </form>
                     <!-- End of Student Number form only -->
