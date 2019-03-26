@@ -46,9 +46,9 @@
         </div> <!-- End of Title-Container -->
         
         <center>
-        <div class="your-works">
-            <h1>Your Works</h1>
-        </div>
+          <div class="your-works">
+              <h1>Your Works</h1>
+          </div>
         </center>
         
         <div class="col-lg-12 col-sm-12 content">

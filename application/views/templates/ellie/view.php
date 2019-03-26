@@ -72,17 +72,21 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Course</label>
                     <select class="form-control" name="course">
-                        <option>Accountancy</option>
-                        <option>Economics</option>
-                        <option>Entrepreneurship</option>
-                        <option>Financial Management</option>
-                        <option>Human Biology</option>
-                        <option>Human Resource</option>
-                        <option>Information Technology</option>
-                        <option>Legal Management</option>
-                        <option>Marketing Management</option>
-                        <option>Operations Management</option>
-                        <option>Psychology</option>
+                      <option>Accountancy</option>
+                      <option>Economics</option>
+                      <option>English</option>
+                      <option>Entrepreneurship</option>
+                      <option>Financial Management</option>
+                      <option>Human Biology</option>
+                      <option>Human Resources</option>
+                      <option>Information Technology</option>
+                      <option>Legal Management</option>
+                      <option>Literature</option>
+                      <option>Marketing Management</option>
+                      <option>Operations Management</option>
+                      <option>Physical Education</option>
+                      <option>Political Science</option>
+                      <option>Psychology</option>
                     </select>
                 </div>
 

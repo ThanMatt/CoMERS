@@ -63,26 +63,26 @@
                         <div class="form-group">
                         <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
                             <label for="exampleInput">Student ID</label>
-                            <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID">
+                            <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID" required>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
                                 <label for="exampleInput">Last Name</label>
-                                <input type="text" class="form-control" name="last-name" id="" placeholder="Enter Last Name">
+                                <input type="text" class="form-control" name="last-name" id="" placeholder="Enter Last Name" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="exampleInput">First Name</label>
-                                <input type="text" class="form-control" name="first-name" id="" placeholder="Enter First Name">
-                            </div>
+                                <input type="text" class="form-control" name="first-name" id="" placeholder="Enter First Name" required>
+                            </div> 
                             <div class="form-group col-sm-4">
                                 <label for="exampleInput">Middle Initial</label>
-                                <input type="text" class="form-control" name="middle-initial" id="" placeholder="Enter Middle Initial">
+                                <input type="text" class="form-control" name="middle-initial" id="" placeholder="Enter Middle Initial" required>
                             </div>
                         </div>    
                         <div class="form-row">
                             <div class="form-group col-sm-6">
                                 <label for="exampleFormControlSelect1">Year</label>
-                                <select class="form-control" name="year-level" id="year">
+                                <select class="form-control" name="year-level" id="year" required>
                                   <option>1st Year</option>
                                   <option>2nd Year</option>
                                   <option>3rd Year</option>
@@ -91,23 +91,27 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="exampleInput">Section</label>
-                                <input type="text" class="form-control" name="section" id="" placeholder="Enter Section">
+                                <input type="text" class="form-control" name="section" id="" placeholder="Enter Section" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Course</label>
-                            <select class="form-control" name="course" id="">
-                                <option>Accountancy</option>
-                                <option>Economics</option>
-                                <option>Entrepreneurship</option>
-                                <option>Financial Management</option>
-                                <option>Human Biology</option>
-                                <option>Human Resource</option>
-                                <option>Information Technology</option>
-                                <option>Legal Management</option>
-                                <option>Marketing Management</option>
-                                <option>Operations Management</option>
-                                <option>Psychology</option>
+                            <select class="form-control" name="course" id="" required>
+                              <option>Accountancy</option>  
+                              <option>Economics</option>
+                              <option>English</option>
+                              <option>Entrepreneurship</option>
+                              <option>Financial Management</option>
+                              <option>Human Biology</option>
+                              <option>Human Resources</option>
+                              <option>Information Technology</option>
+                              <option>Legal Management</option>
+                              <option>Literature</option>
+                              <option>Marketing Management</option>
+                              <option>Operations Management</option>
+                              <option>Physical Education</option>
+                              <option>Political Science</option>
+                              <option>Psychology</option>
                             </select>
                         </div>
                         <div class="form-group form-check checkbox">
@@ -131,7 +135,7 @@
 
                         <div class="form-group">
                             <label for="exampleInput">Student ID</label>
-                            <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID">
+                            <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID" required>
                         </div>
                         <button type="submit" class="btn btn-lg">Submit</button>
                         

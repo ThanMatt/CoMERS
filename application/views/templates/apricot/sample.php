@@ -49,7 +49,7 @@
         </div>
 
         <div class="register">
-          <form action="register.php" method="POST">
+          <form action="" method="POST">
             <input class="txtbox" type="text" name="fname" id="fname" placeholder="Enter First Name.." required>
             <input class="txtbox" type="text" name="mi" id="mi" placeholder="Enter Middle Initial.." required>
             <input class="txtbox" type="text" name="lname" id="lname" placeholder="Enter Last Name.." required>
@@ -86,7 +86,7 @@
             <input id="just-in-case" name="nc" type="text" placeholder="Enter Department..">
 
             <div class="regis-clear">
-              <input id="regis" type="submit" value="Register">
+              <input id="regis" type="submit" value="Register" disabled>
               <!-- <input id="clear" type="reset" value="clear"> -->
             </div>
           </form>
@@ -107,14 +107,14 @@
 
       <div class="edit-button">
           <label>Customize by Logging in!</label>
-          <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
+          <a href="<?=base_url()?>login"><button class="toedit" disabled>LOGIN</button></a>
       </div>
 
       <?php else: ?>
 
       <div class="edit-button">
           <label>Edit this template!</label>
-          <a href="<?=base_url()?>edit/apricot"><button class="toedit">EDIT</button></a>
+          <a href="<?=base_url()?>edit/apricot"><button class="toedit" disabled>EDIT</button></a>
       </div>
 
       <?php endif ?>
