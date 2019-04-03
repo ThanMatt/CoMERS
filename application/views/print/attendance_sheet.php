@@ -9,10 +9,11 @@ $pdf->AddPage('L', 'Letter', 0);
 //$pdf->headerTable();
 
 //!! Header
-$pdf->Image(base_url() . 'uploads/org_logos/' . $org_logo, 10, 3, 20);
-$pdf->SetFont('Arial', 'B', 14);
-$pdf->Cell(276, 5, $system->Title, 0, 0, 'C');
-$pdf->Ln(20);
+$pdf->Image(base_url() . 'uploads/org_logos/' . $org_logo, 30, 3, 20);
+$pdf->Image(base_url() . 'assets/img/sbulogo.png', 10, 3, 20);
+$pdf->SetFont('Arial', 'B', 26);
+$pdf->Cell(276 - ($pdf->GetStringWidth($system->Title)), 5, strtoupper($system->Title) . " ATTENDANCE", 0, 0, 'C');
+$pdf->Ln(15);
 
 //!! Table
 $pdf->SetFont('Arial', 'B', 9);
@@ -42,7 +43,13 @@ foreach ($attendance as $student) {
   $pdf->Cell(20, 10, $student->Section, 1, 0, 'C');
   $pdf->Cell(50, 10, $student->Course, 1, 0, 'C');
   $pdf->Cell(20, 10, $student->Time_In, 1, 0, 'C');
-  $pdf->Cell(20, 10, $student->Time_Out, 1, 0, 'C');
+  if ($student->Time_Out == '00:00:00') {
+
+    $pdf->Cell(20, 10, '', 1, 0, 'C');
+    
+  } else {
+    $pdf->Cell(20, 10, $student->Time_Out, 1, 0, 'C');
+  }
   $pdf->ln();
 
 }
@@ -57,7 +64,7 @@ $pdf->Output('', $system->Title . ' Attendance.pdf');
 
 <?php else: ?>
   <head>
-    <title>404 Not Found </title>
+    <title>Unauthorized</title>
   </head>
-  <?="<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
+  <?="<h1>You are not authorized to view this page</h1>"?>
 <?php endif?>

@@ -37,6 +37,8 @@ class Registration extends CI_Controller {
 
     } else {
       $data['attendance'] = $this->events_model->fetchAttendance($system_id);
+      
+      $data['count'] = $this->events_model->getTotalAttendees($system_id);
 
       $data['check'] = $this->templates_model->isThisMyWork($system_id, $this->session->userdata('account_id'));
 

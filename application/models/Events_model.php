@@ -112,6 +112,13 @@ class Events_Model extends CI_Model {
     }
 
   }
+
+  public function getTotalAttendees($system_id) {
+    $this->db->where('System_ID', $system_id);
+    $this->db->from('attendance');
+
+    return $this->db->count_all_results();
+  }
 }
 
 ?>
