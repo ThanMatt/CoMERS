@@ -19,11 +19,11 @@
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/style-works.css">
 
-  <title>Attendance</title>
+  <title><?=$system->Title?> Attendance</title>
 </head>
 <body>
   <a href="<?=base_url()?>home/works" class="btn btn-danger">Go Back</a>
-  <a href="#" class="btn btn-danger">Print Attendance</a>
+  <a href="<?=base_url()?>registration/print/<?=$system->System_ID?>" class="btn btn-danger" target="_blank">Print Attendance</a>
   <center>
     <h1><?=$system->Title?> attendance</h1>
   </center>
@@ -39,6 +39,7 @@
         <th scope="col">Section</th>
         <th scope="col">Course</th>
         <th scope="col">Time In</th>
+        <th scope="col">Time Out</th>
       </tr>
     </thead>
     <tbody>
@@ -55,6 +56,11 @@
           <td><?=$student->Section?></td>
           <td><?=$student->Course?></td>
           <td><?=$student->Time_In?></td>
+          <?php if($student->Time_Out == "00:00:00"): ?>
+          <td></td>
+          <?php else: ?> 
+          <td><?=$student->Time_Out?></td>
+          <?php endif?>
         </tr>
       <?php endforeach ?>
     <?php endif ?>

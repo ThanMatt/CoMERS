@@ -55,7 +55,7 @@
             <input class="txtbox" type="text" name="lname" id="lname" placeholder="Enter Last Name.." required>
             <input class="txtbox" type="text" name="snum" id="txt_snum2" placeholder="Enter Student Number.." required>
             <div class="no-dept">
-              <select name="yrlvl">
+              <select name="yrlvl>
                 <option>1st Year</option>
                 <option>2nd Year</option>
                 <option>3rd Year</option>
@@ -107,14 +107,14 @@
 
       <div class="edit-button">
           <label>Customize by Logging in!</label>
-          <a href="<?=base_url()?>login"><button class="toedit" disabled>LOGIN</button></a>
+          <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
       </div>
 
       <?php else: ?>
 
       <div class="edit-button">
           <label>Edit this template!</label>
-          <a href="<?=base_url()?>edit/apricot"><button class="toedit" disabled>EDIT</button></a>
+          <a href="<?=base_url()?>edit/apricot"><button class="toedit">EDIT</button></a>
       </div>
 
       <?php endif ?>

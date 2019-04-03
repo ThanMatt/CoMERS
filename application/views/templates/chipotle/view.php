@@ -110,7 +110,7 @@
             
             <div class="col-sm-4 picture-container">
             
-              <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" height="500px">
+              <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" height="500px">
                 
             </div>
             

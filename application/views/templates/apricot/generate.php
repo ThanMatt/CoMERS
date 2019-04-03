@@ -44,7 +44,7 @@
             </a>
           </div>
           <div class="bits">
-            <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="150" height="150">
+            <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" width="150" height="150">
           </div>
         </div>
 

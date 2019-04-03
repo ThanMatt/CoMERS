@@ -32,7 +32,7 @@
         <div class="content">
             
             <div class="circ-logo">
-                <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
+                <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" width="100px" height="100px">
             </div>
                 
             <form class="col-10 form-cont" id="ajax_form">
@@ -75,19 +75,23 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect2">Course</label>
-                    <select class="form-control" id="" name="course" required>
+                      <select class="form-control" id="" name="course" required>
                         <option>Accountancy</option>
                         <option>Economics</option>
+                        <option>English</option>
                         <option>Entrepreneurship</option>
                         <option>Financial Management</option>
                         <option>Human Biology</option>
-                        <option>Human Resource</option>
+                        <option>Human Resources</option>
                         <option>Information Technology</option>
                         <option>Legal Management</option>
+                        <option>Literature</option>
                         <option>Marketing Management</option>
                         <option>Operations Management</option>
+                        <option>Physical Education</option>
+                        <option>Political Science</option>
                         <option>Psychology</option>
-                    </select>
+                      </select>
                 </div>
 
                 <button type="submit" class="submit col-sm btn btn-lg">Submit</button>

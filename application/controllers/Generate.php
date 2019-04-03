@@ -12,7 +12,7 @@ class Generate extends CI_Controller {
     $event_name = $this->input->post('event_name', true);
 
     $config = array(
-      'upload_path' => 'assets/img/uploads/',
+      'upload_path' => 'uploads/events',
       'allowed_types' => 'jpg|jpeg|png',
     );
 
