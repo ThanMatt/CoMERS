@@ -66,10 +66,14 @@
                 <a href="<?=base_url()?>templates/edit/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">Edit</a>
 
                 <a href="<?=base_url()?>view/<?=strtolower($work->Register_Name)?>/<?=$work->System_ID?>" class="btn btn-danger" target="_blank">View</a>
+
+                <a href="<?=base_url()?>timeout/events/<?=strtolower($work->System_ID)?>" class="btn btn-danger" target="_blank">Time Out</a>
+
                 <a href="<?=base_url()?>registration/events/<?=$work->System_ID?>" id="deploy-btn/<?=$work->System_ID?>" class="btn btn-danger deploy-content" target="_blank">Deploy</a>
 
                 <a href="<?=base_url()?>registration/attendance/<?=strtolower($work->System_ID)?>" class="btn btn-danger">Attendance</a>
                 
+
               </div>
             </div>
           <?php endforeach ?>  

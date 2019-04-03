@@ -32,7 +32,7 @@
         <div class="content">
             
             <div class="circ-logo">
-                <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
+                <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" width="100px" height="100px">
             </div>
                 
             <form class="col-10 form-cont" id="ajax_form">

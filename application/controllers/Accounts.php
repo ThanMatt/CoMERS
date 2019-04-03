@@ -16,6 +16,7 @@ class Accounts extends CI_Controller {
       $account_data = array(
         'account_id' => $account_id,
         'organization' => $records['Organization'],
+        'org_logo' => $records['Org_Logo'],
         'logged_in' => true,
       );
 

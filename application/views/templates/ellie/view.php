@@ -29,7 +29,7 @@
     <div class="container-fluid main-container">
         
         <div class="bits">
-            <img src="<?=base_url()?>assets/img/uploads/<?=$generate->Logo?>" width="100px" height="100px">
+            <img src="<?=base_url()?>uploads/events<?=$generate->Logo?>" width="100px" height="100px">
         </div>
       
         <div class='col-6 content'>
