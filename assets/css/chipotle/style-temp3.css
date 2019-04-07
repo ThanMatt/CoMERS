@@ -136,3 +136,60 @@ body{
     background-color: #b9494f;
     padding: 20px 30px;
 }
+
+.studentnum{
+    z-index: 100;
+    cursor: pointer;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-left: 10px solid #714C8F;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
+}
+
+.form-container-student{
+    display: none;
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+
+.form-container-student .title{
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    border-bottom: 3px solid white;
+}
+
+.form-container-student .form-group{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#button-submit{
+    background-color: #714C8F;
+    cursor: pointer;
+    color: white;
+    transition: all .15s linear;
+}
+
+#button-submit:hover{
+    background-color: white;
+    color: #714C8F;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+

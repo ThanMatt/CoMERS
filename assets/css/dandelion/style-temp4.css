@@ -169,3 +169,44 @@ body{
 .event-title h1{
   font-size: 4rem;
 }
+
+.studentnum{
+    z-index: 100;
+    cursor: pointer;
+    background-color: #262626;
+    bottom: 20px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-left: 10px solid #b9494f;
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.3);
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    width: 20%;
+}
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none;
+}
+
+.form-container-student{
+    display: none;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+#button-submit{
+    cursor: pointer;
+    color: #b9494f;
+    background-color: white;
+    transition: all .25s linear;
+}
+
+#button-submit:hover{
+    color: white;
+    background-color: #b9494f;
+}
