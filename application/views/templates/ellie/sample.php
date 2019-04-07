@@ -91,8 +91,28 @@
 
                 <button type="submit" class="submit col-sm btn btn-lg" disabled>Submit</button>
                 <button type="clear" class="clear col-sm btn btn-sm" disabled>Clear</button>
+                
+            </form>
+            
+            <!-- For Student Number form only -->
+            <form class="col-sm-10 col-md-10 col-lg-10 form-container-student">
+
+                <div class="title">
+                    <label>General Assembly</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">Student ID</label>
+                    <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID">
+                </div>
+                <button id="button-submit" type="submit" class="btn btn-lg" disabled>Submit</button>
 
             </form>
+            <!-- End of Student Number form only -->
+            
+            <div class="studentnum">
+                Switch
+            </div>   
         </div>
         
         <!-- EDIT BUTTON -->
@@ -133,7 +153,7 @@
   </script>
 
   <!--Personal Javascript -->
-  <script src="<?=base_url()?>assets/js/script.js">
+  <script src="<?=base_url()?>assets/js/ellie/script.js">
   </script>
 </body>
 
