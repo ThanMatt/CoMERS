@@ -101,3 +101,53 @@ body{
     padding: 20px 30px;
 }
 
+.studentnum{
+    z-index: 100;
+    cursor: pointer;
+    background-color:#ff5959;
+    bottom: 20px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    color: white;
+}
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none;
+}
+
+.form-container-student{
+    display: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.form-container-student .title{
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#button-submit{
+    background-color: #ececec;
+    color:#d9534f;
+    transition: all .25s linear;
+    cursor: pointer;
+}
+
+#button-submit:hover{
+    color: white;
+    background-color:#ff5959;
+}

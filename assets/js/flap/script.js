@@ -1,25 +1,12 @@
 $(document).ready(function(){
     
-    parallaxscroll();
+    tostudentnum();
     
-    function parallaxscroll(){
+    function tostudentnum(){
         
-        $(window).scroll(function(){
-            
-            var vscroll = $(this).scrollTop();
-            
-            $(".title").css({
-                'transform' : 'translate(0px, '+ vscroll/10 +'%)'
-            });
-            
-            $(".lantern1").css({
-                'transform' : 'translate(0px, '+ vscroll/5 +'%)'
-            });
-            
-            $(".lantern2").css({
-                'transform' : 'translate(0px, -'+ vscroll/10 +'%)'
-            });
-            
+        $(".studentnum").on("click", function(){
+            $(".form-container-student").toggleClass('show');
+            $(".form-cont").toggleClass('hide');
         });
         
     }

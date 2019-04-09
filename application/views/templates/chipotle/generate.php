@@ -108,13 +108,34 @@
                 
             </div>
             
+            <!-- For Student Number form only -->
+            <form class="col-sm-6 col-md-6 col-lg-6 form-container-student" id="ajax-form-id">
+
+                <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
+                <div class="title">
+                    <label><?=$generate->Title?></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">Student ID</label>
+                    <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID">
+                </div>
+                <button id="button-submit" type="submit" class="btn btn-lg">Submit</button>
+
+            </form>
+            <!-- End of Student Number form only -->
             <div class="col-sm-4 picture-container">
             
               <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" height="500px">
                 
             </div>
             
-        </div>  
+        </div>
+        
+        <div class="studentnum">
+            Switch
+        </div>                
+        
     </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -133,7 +154,7 @@
   </script>
 
   <!--Personal Javascript -->
-  <script src="<?=base_url()?>assets/js/script.js">
+  <script src="<?=base_url()?>assets/js/chipotle/script.js">
   </script>
 
   <script type="text/javascript">

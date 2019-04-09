@@ -127,15 +127,16 @@
                     </div>
                     
                     <!-- For Student Number form only -->
-                    <form class="col-sm-12 col-md-12 col-lg-10 form-container-student">
+                    <form class="col-sm-12 col-md-12 col-lg-10 form-container-student" id="ajax-form-id">
 
+                    <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
                         <div class="title">
-                            <label>General Assembly</label>
+                            <label><?=$generate->Title?></label>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInput">Student ID</label>
-                            <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID" required>
+                            <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID" required>
                         </div>
                         <button type="submit" class="btn btn-lg">Submit</button>
                         

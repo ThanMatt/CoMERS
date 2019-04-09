@@ -173,7 +173,5 @@
     var BASE_URL = "<?=base_url()?>";
   </script>
 
-  <script src="<?=base_url()?>assets/js/register.js">
-  </script>
 </body>
 </html>

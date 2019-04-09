@@ -31,6 +31,22 @@ class Register extends CI_Controller {
 
     
   }
+  public function id() {
+    $response = array();
+
+    $student_id = $this->input->post('student-id', true);
+    $system_id = $this->input->post('system-id', true);
+
+    if ($this->events_model->registerByID($student_id, $system_id)) {
+      $response['success'] = true;
+    } else {
+      $response['id'] = $system_id;
+      $response['success'] = false;
+    }
+
+    echo json_encode($response);
+  }
+
 }
 
 
