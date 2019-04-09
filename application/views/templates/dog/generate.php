@@ -98,8 +98,32 @@
                 <button type="reset" class="clear col-sm btn btn-sm">Clear</button>
 
             </form>
+
+            
+            <form class="col-sm-10 col-md-10 col-lg-10 form-container-student" id="ajax-form-id">
+
+                <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
+                <div class="title">
+                    <label><?=$generate->Title?></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">Student ID</label>
+                    <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID" required>
+                </div>
+                <button id="button-submit" type="submit" class="btn btn-lg">Submit</button>
+
+            </form>
+            <!-- End of Student Number form only -->
             
         </div>
+        
+        <div class="studentnum">
+            Switch
+        </div>   
+    
+            
+
         
     </div> 
   <!-- End of main-container -->
@@ -121,9 +145,6 @@
   </script>
 
   <!--Personal Javascript -->
-  
-  <script src="<?=base_url()?>assets/js/dandelion/script.js">
-  </script>
   
   <script src="<?=base_url()?>assets/js/dandelion/script.js">
   </script>

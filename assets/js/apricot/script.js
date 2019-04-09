@@ -24,7 +24,7 @@ $(function () {
       $(".right-container").css("width", "40%");
       $(".right-content").css("display", "flex");
       $('.register').css("display", "none");
-      $("input[type=submit").css("opacity", "1");
+      $("input[type=submit]").css("opacity", "1");
       $("#txt_snum").removeAttr("disabled");
       $("#txt_snum").attr("placeholder", "Enter Student Number...");
       $("#fname").val("");
@@ -49,18 +49,19 @@ $(function () {
   }
 
   //To check user input
-  $('#ajax_form').submit(function (event) {
+  $('#ajax-form-id').submit(function (event) {
     event.preventDefault();
-    var $form = $(this);
+    var form = $(this);
 
     $.ajax({
       type: 'POST',
-      url: 'check.php',
-      data: $form.serialize(),
+      url: BASE_URL + 'register/id',
+      data: form.serialize(),
+      dataType: 'json',
       success: function (response) {
         if (response.success) {
           alert("You've successfully logged in!");
-          window.location.reload();
+          $('#txt_snum').val('');
         } else {
           var student_id = response.student_id;
           alert("Your student number is not yet registered! Kindly fill-up the following fields after clicking OK");
@@ -75,6 +76,9 @@ $(function () {
           $("#txt_snum").removeAttr("placeholder");
           $("#txt_snum2").val(student_id);
         }
+      },
+      error: function (response) {
+        alert('THERE WAS AN UNEXPECTED ERROR');
       }
 
     });

@@ -26,22 +26,24 @@ $(function () {
   });
   
 
-  $("#ajax_form_id").submit(function (event) {
+  $("#ajax-form-id").submit(function (event) {
     event.preventDefault();
 
     var form = $(this);
 
     $.ajax({
       type: 'POST',
-      url: BASE_URL + 'register',
+      url: BASE_URL + 'register/id',
       data: form.serialize(),
       dataType: 'json',
       success: function (response) {
+        //alert(form.serialize());
         if (response.success) {
           alert("Registration Successful!");
-          location.reload();
+          $('#student_id').val('');
+
         } else {
-          alert("There was an error");
+          alert("YOUR ID WAS NOT FOUND. PLEASE REGISTER MANUALLY");
           location.reload();
         }
       },

@@ -108,16 +108,36 @@
                 
             </div>
             
+            <!-- For Student Number form only -->
+            <form class="col-sm-6 col-md-6 col-lg-6 form-container-student">
+
+                <div class="title">
+                    <label><?=$generate->Title?></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">Student ID</label>
+                    <input type="text" class="form-control" name="student_id" id="student_id" placeholder="Enter Student ID">
+                </div>
+                <button id="button-submit" type="submit" class="btn btn-lg" disabled>Submit</button>
+
+            </form>
+            <!-- End of Student Number form only -->
+            
             <div class="col-sm-4 picture-container">
             
               <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" height="500px">
                 
             </div>
             
-        </div>  
+        </div>
+        
+        <div class="studentnum">
+            Switch
+        </div>                
+        
         <div class="edit-button">
           <label>THIS IS VIEW ONLY</label>
-          <a href="<?=base_url()?>login"><button class="toedit">LOGIN</button></a>
         </div>
     </div>
   <!-- Optional JavaScript -->
@@ -137,15 +157,13 @@
   </script>
 
   <!--Personal Javascript -->
-  <script src="<?=base_url()?>assets/js/script.js">
+  <script src="<?=base_url()?>assets/js/chipotle/script.js">
   </script>
 
   <script type="text/javascript">
     var BASE_URL = "<?=base_url()?>";
   </script>
 
-  <script src="<?=base_url()?>assets/js/register.js">
-  </script>
 </body>
 <?php else: ?>
   <head>

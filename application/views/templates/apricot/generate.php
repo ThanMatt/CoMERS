@@ -4,13 +4,19 @@
 <head>
   <title><?=$generate->Title?></title>
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/apricot/styles.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    var BASE_URL = "<?=base_url()?>";
-  </script>
-  <script src="<?=base_url()?>assets/js/apricot/script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <!-- Local Bootstrap CSS -->
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css.map">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-grid.min.css.map">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css.map">
 </head>
 
 <body>
@@ -22,8 +28,10 @@
 
         <label>Hello there,</label>
         <label><?=$generate->Title?></label>
-        <form id="ajax_form">
-          <input type="text" name="snum" id="txt_snum" placeholder="Enter Student Number..." required>
+        <form id="ajax-form-id">
+          
+          <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
+          <input type="text" name="student-id" id="txt_snum" placeholder="Enter Student Number..." class="form-control" required>
           <input type="submit" value="Login">
         </form>
         <label id="manual">Manual Registration</label>
@@ -104,6 +112,14 @@
   </div>
   <!-- End of Main Container -->
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  var BASE_URL = "<?=base_url()?>";
+</script>
+<script src="<?=base_url()?>assets/js/apricot/script.js"></script>
+
 <?php else: ?>
   <head>
     <title>404 Not Found </title>
