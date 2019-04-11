@@ -1,5 +1,5 @@
-composer.json
-composer.lock
+!composer.json
+!composer.lock
 application/logs/*
 !application/logs/index.html
 vendor/
