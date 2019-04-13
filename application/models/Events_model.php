@@ -165,6 +165,22 @@ class Events_Model extends CI_Model {
       return false;
     }
   }
+  
+  public function checkIfLoggedIn($student_id, $system_id) {
+    $this->db->where('Student_ID', $student_id);
+    $this->db->where('System_ID', $system_id); 
+    $this->db->from('attendance');
+
+    $result = $this->db->get();
+
+    $rows = $result->num_rows();
+
+    if ($rows >= 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 ?>

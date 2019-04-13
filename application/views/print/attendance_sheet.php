@@ -12,7 +12,7 @@ $pdf->AddPage('L', 'Letter', 0);
 $pdf->Image(base_url() . 'uploads/org_logos/' . $org_logo, 30, 3, 20);
 $pdf->Image(base_url() . 'assets/img/sbulogo.png', 10, 3, 20);
 $pdf->SetFont('Arial', 'B', 15);
-$pdf->Cell(276 - ($pdf->GetStringWidth($system->Title)), 5, strtoupper($system->Title) . " ATTENDANCE", 0, 0, 'C');
+$pdf->Cell(350 - ($pdf->GetStringWidth($system->Title)), 5, strtoupper($system->Title) . " ATTENDANCE", 0, 0, 'C');
 $pdf->Ln(15);
 
 //!! Table

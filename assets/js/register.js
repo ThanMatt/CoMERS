@@ -10,12 +10,16 @@ $(function () {
       data: form.serialize(),
       dataType: 'json',
       success: function (response) {
-        if (response.success) {
-          alert("Registration Successful!");
-          location.reload();
+        if (response.logged_in) {
+          alert('You have already registered!')
         } else {
-          alert("There was an error");
-          location.reload();
+          if (response.success) {
+            alert('Registration succcessful!');
+            location.reload();
+          } else {
+            alert("There was an error");
+            location.reload();
+          }
         }
       },
       error: function (response) {
@@ -24,7 +28,7 @@ $(function () {
       },
     });
   });
-  
+
 
   $("#ajax-form-id").submit(function (event) {
     event.preventDefault();
@@ -38,13 +42,18 @@ $(function () {
       dataType: 'json',
       success: function (response) {
         //alert(form.serialize());
-        if (response.success) {
-          alert("Registration Successful!");
-          $('#student_id').val('');
-
+        if (response.logged_in) {
+          alert('You have already registered!');
         } else {
-          alert("YOUR ID WAS NOT FOUND. PLEASE REGISTER MANUALLY");
-          location.reload();
+
+          if (response.success) {
+            alert("Registration Successful!");
+            $('#student_id').val('');
+
+          } else {
+            alert("YOUR ID WAS NOT FOUND. PLEASE REGISTER MANUALLY");
+            location.reload();
+          }
         }
       },
       error: function (response) {
