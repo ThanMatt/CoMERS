@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Register extends CI_Controller {
   public function index() {
@@ -16,20 +16,25 @@ class Register extends CI_Controller {
     $course = $this->input->post('course', true);
     $system_id = $this->input->post('system-id', true);
 
-    if ($this->events_model->register($student_id, $last_name, $first_name,
-      $middle_initial, $year, $section, $course, $system_id, $time_in, $date_in)) {
+    if ($this->events_model->checkIfLoggedIn($student_id, $system_id)) {
 
-      $response['success'] = true;
-
+      $response['logged_in'] = true;
     } else {
 
-      $response['success'] = false;
+      if ($this->events_model->register($student_id, $last_name, $first_name,
+        $middle_initial, $year, $section, $course, $system_id, $time_in, $date_in)) {
 
+        $response['success'] = true;
+
+      } else {
+
+        $response['success'] = false;
+
+      }
     }
 
     echo json_encode($response);
 
-    
   }
   public function id() {
     $response = array();
@@ -37,17 +42,22 @@ class Register extends CI_Controller {
     $student_id = $this->input->post('student-id', true);
     $system_id = $this->input->post('system-id', true);
 
-    if ($this->events_model->registerByID($student_id, $system_id)) {
-      $response['success'] = true;
+    if ($this->events_model->checkIfLoggedIn($student_id, $system_id)) {
+
+      $response['logged_in'] = true;
     } else {
-      $response['id'] = $system_id;
-      $response['success'] = false;
+
+      if ($this->events_model->registerByID($student_id, $system_id)) {
+        $response['success'] = true;
+      } else {
+        $response['id'] = $system_id;
+        $response['success'] = false;
+      }
     }
 
     echo json_encode($response);
   }
 
 }
-
 
 ?>
