@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-reboot.min.css.map">
 
-    
+
     <!-- Personal CSS -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/bamboo/styles.css">
-      
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title><?=$generate->Title?></title>
@@ -29,37 +29,37 @@
 
 <body>
     <div class="container-fluid main-container">
-        
+
         <div class="logo-container"></div>
         <div class="welcome"></div>
-        
+
         <div class="bits">
             <img src="<?=base_url()?>assets/img/bamboo/BITS%20Logo.png" width="100px" height="100px">
         </div>
-        
+
         <div class="container-fluid view-container">
-            
+
             <div class="bits">
                 <img src="<?=base_url()?>uploads/events/<?=$generate->Logo?>" width="100px" height="100px">
             </div>
-            
+
             <div class="row no-gutters">
                 <div class="left-col col-sm-12 col-lg-4">
-                
+
                 </div>
                 <div class="right-col col-sm-12 col-lg-8">
-                    
+
                     <div class="string">
                         <img src="<?=base_url()?>assets/img/bamboo/string.jpg">
                         <img src="<?=base_url()?>assets/img/bamboo/string.jpg">
                     </div>
-                    
+
                     <form class="col-sm-12 col-md-12 col-lg-10 form-container" id="ajax_form">
-                        
+
                         <div class="title">
                             <label><?=$generate->Title?></label>
                         </div>
-                        
+
                         <div class="form-group">
                         <input type="text" class="form-control" placeholder="You shouldn't be here" name="system-id" value="<?=$generate->System_ID?>" readonly hidden required>
                             <label for="exampleInput">Student ID</label>
@@ -73,20 +73,20 @@
                             <div class="form-group col-sm-4">
                                 <label for="exampleInput">First Name</label>
                                 <input type="text" class="form-control" name="first-name" id="" placeholder="Enter First Name" required>
-                            </div> 
+                            </div>
                             <div class="form-group col-sm-4">
                                 <label for="exampleInput">Middle Initial</label>
                                 <input type="text" class="form-control" name="middle-initial" id="" placeholder="Enter Middle Initial" required>
                             </div>
-                        </div>    
+                        </div>
                         <div class="form-row">
                             <div class="form-group col-sm-6">
                                 <label for="exampleFormControlSelect1">Year</label>
                                 <select class="form-control" name="year-level" id="year" required>
-                                  <option>1st Year</option>
-                                  <option>2nd Year</option>
-                                  <option>3rd Year</option>
-                                  <option>4th Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
                                 </select>
                             </div>
                             <div class="form-group col-sm-6">
@@ -97,21 +97,21 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Course</label>
                             <select class="form-control" name="course" id="" required>
-                              <option>Accountancy</option>  
-                              <option>Economics</option>
-                              <option>English</option>
-                              <option>Entrepreneurship</option>
-                              <option>Financial Management</option>
-                              <option>Human Biology</option>
-                              <option>Human Resources</option>
-                              <option>Information Technology</option>
-                              <option>Legal Management</option>
-                              <option>Literature</option>
-                              <option>Marketing Management</option>
-                              <option>Operations Management</option>
-                              <option>Physical Education</option>
-                              <option>Political Science</option>
-                              <option>Psychology</option>
+                          <option value="BSA">Accountancy</option>
+                          <option value="BS ECO">Economics</option>
+                          <option value="AB ENGLISH">English</option>
+                          <option value="BS ENTREP">Entrepreneurship</option>
+                          <option value="BSBA FM">Financial Management</option>
+                          <option value="BSHB">Human Biology</option>
+                          <option value="BSBA HRM">Human Resources</option>
+                          <option value="BS ICT">Information Technology</option>
+                          <option value="BS LM">Legal Management</option>
+                          <option value="ABLIT">Literature</option>
+                          <option value="BSBA-MARKETING">Marketing Management</option>
+                          <option value="BSBA-OM">Operations Management</option>
+                          <option value="BSPE">Physical Education</option>
+                          <option value="ABPOL">Political Science</option>
+                          <option value="BSP">Psychology</option>
                             </select>
                         </div>
                         <div class="form-group form-check checkbox">
@@ -121,11 +121,11 @@
 
                         <button type="submit" class="btn btn-lg">Submit</button>
                     </form>
-                    
+
                     <div class="studentnum">
                         Switch
                     </div>
-                    
+
                     <!-- For Student Number form only -->
                     <form class="col-sm-12 col-md-12 col-lg-10 form-container-student" id="ajax-form-id">
 
@@ -139,24 +139,24 @@
                             <input type="text" class="form-control" name="student-id" id="student_id" placeholder="Enter Student ID" required>
                         </div>
                         <button type="submit" class="btn btn-lg">Submit</button>
-                        
+
                     </form>
                     <!-- End of Student Number form only -->
 
-                </div> <!-- End of right column -->   
-            </div> 
-            
+                </div> <!-- End of right column -->
+            </div>
+
         </div> <!-- End of second container fluid -->
-        
+
     </div> <!-- End of main container fluid -->
-    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?= base_url();?>assets/js/jquery-3.3.1.js"></script>
+    <script src="<?=base_url();?>assets/js/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
+
   <!-- Local Bootstrap Javascript -->
   <script src="<?=base_url()?>assets/js/bootstrap.bundle.min.js">
   </script>
@@ -178,6 +178,6 @@
   <head>
     <title>404 Not Found </title>
   </head>
-  <?= "<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
+  <?="<h1>404 ERROR: The registration might have been removed or closed by the moderator</h1>"?>
 <?php endif?>
 </html>

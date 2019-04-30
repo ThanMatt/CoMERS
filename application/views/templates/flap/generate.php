@@ -62,10 +62,10 @@
                         <div class="form-group col-sm-6">
                             <label for="exampleFormControlSelect1">Year</label>
                             <select class="form-control" id="year" name="year-level" required>
-                              <option>1st Year</option>
-                              <option>2nd Year</option>
-                              <option>3rd Year</option>
-                              <option>4th Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-6">
@@ -76,21 +76,21 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Course</label>
                         <select class="form-control" id="" name="course" required>
-                          <option>Accountancy</option>
-                          <option>Economics</option>
-                          <option>English</option>
-                          <option>Entrepreneurship</option>
-                          <option>Financial Management</option>
-                          <option>Human Biology</option>
-                          <option>Human Resources</option>
-                          <option>Information Technology</option>
-                          <option>Legal Management</option>
-                          <option>Literature</option>
-                          <option>Marketing Management</option>
-                          <option>Operations Management</option>
-                          <option>Physical Education</option>
-                          <option>Political Science</option>
-                          <option>Psychology</option>
+                          <option value="BSA">Accountancy</option>
+                          <option value="BS ECO">Economics</option>
+                          <option value="AB ENGLISH">English</option>
+                          <option value="BS ENTREP">Entrepreneurship</option>
+                          <option value="BSBA FM">Financial Management</option>
+                          <option value="BSHB">Human Biology</option>
+                          <option value="BSBA HRM">Human Resources</option>
+                          <option value="BS ICT">Information Technology</option>
+                          <option value="BS LM">Legal Management</option>
+                          <option value="ABLIT">Literature</option>
+                          <option value="BSBA-MARKETING">Marketing Management</option>
+                          <option value="BSBA-OM">Operations Management</option>
+                          <option value="BSPE">Physical Education</option>
+                          <option value="ABPOL">Political Science</option>
+                          <option value="BSP">Psychology</option>
                         </select>
                     </div>
 

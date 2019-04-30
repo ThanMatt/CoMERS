@@ -12,7 +12,6 @@ class Register extends CI_Controller {
     $first_name = $this->input->post('first-name', true);
     $middle_initial = $this->input->post('middle-initial', true);
     $year = $this->input->post('year-level', true);
-    $section = $this->input->post('section', true);
     $course = $this->input->post('course', true);
     $system_id = $this->input->post('system-id', true);
 
@@ -22,7 +21,7 @@ class Register extends CI_Controller {
     } else {
 
       if ($this->events_model->register($student_id, $last_name, $first_name,
-        $middle_initial, $year, $section, $course, $system_id, $time_in, $date_in)) {
+        $middle_initial, $year, $course, $system_id, $time_in, $date_in)) {
 
         $response['success'] = true;
 
@@ -45,6 +44,7 @@ class Register extends CI_Controller {
     if ($this->events_model->checkIfLoggedIn($student_id, $system_id)) {
 
       $response['logged_in'] = true;
+    
     } else {
 
       if ($this->events_model->registerByID($student_id, $system_id)) {

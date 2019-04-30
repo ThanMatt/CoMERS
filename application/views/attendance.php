@@ -36,7 +36,6 @@
         <th scope="col">Last Name</th>
         <th scope="col">Middle Initial</th>
         <th scope="col">Year</th>
-        <th scope="col">Section</th>
         <th scope="col">Course</th>
         <th scope="col">Time In</th>
         <th scope="col">Time Out</th>
@@ -53,7 +52,6 @@
           <td><?=$student->Last_Name?></td>
           <td><?=$student->Middle_Initial?></td>
           <td><?=$student->Year?></td>
-          <td><?=$student->Section?></td>
           <td><?=$student->Course?></td>
           <td><?=$student->Time_In?></td>
           <?php if($student->Time_Out == "00:00:00"): ?>

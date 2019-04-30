@@ -2,7 +2,7 @@
 
 class Events_Model extends CI_Model {
   public function register($student_id, $last_name, $first_name,
-    $middle_initial, $year, $section, $course, $system_id, $time_in, $date_in) {
+    $middle_initial, $year, $course, $system_id, $time_in, $date_in) {
 
     $this->db->where('System_ID', $system_id);
     $this->db->from('registration_systems');
@@ -18,7 +18,6 @@ class Events_Model extends CI_Model {
       'First_Name' => $first_name,
       'Middle_Initial' => $middle_initial,
       'Year' => $year,
-      'Section' => $section,
       'Course' => $course,
       'System_ID' => $system_id,
       'Title' => $title,
@@ -147,7 +146,6 @@ class Events_Model extends CI_Model {
         'First_Name' => $row->First_Name,
         'Middle_Initial' => $row->Middle_Initial,
         'Year' => $row->Year,
-        'Section' => $row->Section,
         'Course' => $row->Course,
         'System_ID' => $system_id,
         'Title' => $title,

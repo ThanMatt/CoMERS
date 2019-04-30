@@ -17,16 +17,15 @@ $pdf->Ln(15);
 
 //!! Table
 $pdf->SetFont('Arial', 'B', 9);
-$pdf->Cell(10, 10, '#', 1, 0, 'C');
-$pdf->Cell(25, 10, 'Student ID', 1, 0, 'C');
-$pdf->Cell(40, 10, 'Last Name', 1, 0, 'C');
-$pdf->Cell(40, 10, 'First Name', 1, 0, 'C');
-$pdf->Cell(20, 10, 'MI', 1, 0, 'C');
-$pdf->Cell(15, 10, 'Year', 1, 0, 'C');
-$pdf->Cell(20, 10, 'Section', 1, 0, 'C');
-$pdf->Cell(50, 10, 'Course', 1, 0, 'C');
-$pdf->Cell(20, 10, 'Time In', 1, 0, 'C');
-$pdf->Cell(20, 10, 'Time Out', 1, 0, 'C');
+$pdf->Cell(12, 10, '#', 1, 0, 'C');
+$pdf->Cell(27, 10, 'Student ID', 1, 0, 'C');
+$pdf->Cell(42, 10, 'Last Name', 1, 0, 'C');
+$pdf->Cell(42, 10, 'First Name', 1, 0, 'C');
+$pdf->Cell(22, 10, 'MI', 1, 0, 'C');
+$pdf->Cell(17, 10, 'Year', 1, 0, 'C');
+$pdf->Cell(52, 10, 'Course', 1, 0, 'C');
+$pdf->Cell(22, 10, 'Time In', 1, 0, 'C');
+$pdf->Cell(22, 10, 'Time Out', 1, 0, 'C');
 $pdf->ln();
 
 $counter = 0;
@@ -34,21 +33,20 @@ $counter = 0;
 foreach ($attendance as $student) {
   $counter++;
   $pdf->SetFont('Arial', '', 9);
-  $pdf->Cell(10, 10, $counter, 1, 0, 'C');
-  $pdf->Cell(25, 10, $student->Student_ID, 1, 0, 'C');
-  $pdf->Cell(40, 10, $student->Last_Name, 1, 0, 'C');
-  $pdf->Cell(40, 10, $student->First_Name, 1, 0, 'C');
-  $pdf->Cell(20, 10, $student->Middle_Initial, 1, 0, 'C');
-  $pdf->Cell(15, 10, $student->Year, 1, 0, 'C');
-  $pdf->Cell(20, 10, $student->Section, 1, 0, 'C');
-  $pdf->Cell(50, 10, $student->Course, 1, 0, 'C');
-  $pdf->Cell(20, 10, $student->Time_In, 1, 0, 'C');
+  $pdf->Cell(12, 10, $counter, 1, 0, 'C');
+  $pdf->Cell(27, 10, $student->Student_ID, 1, 0, 'C');
+  $pdf->Cell(42, 10, $student->Last_Name, 1, 0, 'C');
+  $pdf->Cell(42, 10, $student->First_Name, 1, 0, 'C');
+  $pdf->Cell(22, 10, $student->Middle_Initial, 1, 0, 'C');
+  $pdf->Cell(17, 10, $student->Year, 1, 0, 'C');
+  $pdf->Cell(52, 10, $student->Course, 1, 0, 'C');
+  $pdf->Cell(22, 10, $student->Time_In, 1, 0, 'C');
   if ($student->Time_Out == '00:00:00') {
 
-    $pdf->Cell(20, 10, '', 1, 0, 'C');
+    $pdf->Cell(22, 10, '', 1, 0, 'C');
     
   } else {
-    $pdf->Cell(20, 10, $student->Time_Out, 1, 0, 'C');
+    $pdf->Cell(22, 10, $student->Time_Out, 1, 0, 'C');
   }
   $pdf->ln();
 
